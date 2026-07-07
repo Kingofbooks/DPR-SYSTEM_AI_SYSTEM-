@@ -1,0 +1,5 @@
+pypdf
+pandas
+scikit-learn
+jinja2
+pymupdf
