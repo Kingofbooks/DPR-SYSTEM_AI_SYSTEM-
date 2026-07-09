@@ -1,0 +1,26 @@
+required_sections:
+  - Introduction
+  - Objectives
+  - Technical
+  - Financial
+  - Budget
+  - Timeline
+  - Risk
+  - Environmental
+  - Legal
+
+optional_sections:
+  - Appendix
+  - References
+  - Annexure
+
+weights:
+  Introduction: 10
+  Objectives: 10
+  Technical: 20
+  Financial: 20
+  Budget : 20
+  Timeline: 15
+  Risk: 15
+  Environmental: 10
+  Legal : 10

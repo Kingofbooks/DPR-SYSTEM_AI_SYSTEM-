@@ -1,6 +1,7 @@
 import os
 import sys
 from pathlib import Path
+import json
 
 APP_DIR = Path(__file__).resolve().parents[1]
 if str(APP_DIR) not in sys.path:
@@ -10,8 +11,6 @@ from dotenv import load_dotenv
 from config import config
 from google.adk.agents import LlmAgent
 from google.adk.models.google_llm import Gemini
-from google.adk.runners import Runner
-from google.adk.tools import google_search
 from google.adk.runners import InMemoryRunner
 from google.genai import types
 
@@ -25,15 +24,15 @@ class SectionClassifier:
     def __init__(self):
         self.model_name = config.MODEL_NAME
         self.google_api_key = config.GOOGLE_API_KEY
-        self.section_dector=SectionDetector()
-        self.retry_config=types.HttpRetryOptions(
+        self.section_detector = SectionDetector()
+        self.retry_config = types.HttpRetryOptions(
                 attempts=3,
                 exp_base=7,
                 initial_delay=1,
                 http_status_codes=[429, 500, 503, 504]
             )
             
-        self.assistant_agent= LlmAgent(
+        self.assistant_agent = LlmAgent(
                 name="section_classifier",
                 model=Gemini(
                     model=self.model_name,
@@ -118,19 +117,56 @@ class SectionClassifier:
         self.runner = InMemoryRunner(agent=self.assistant_agent)
         print("Runner created.")
     
-    def chat_section_classifier(self, query):
-        self.response= asyncio.run(self.runner.run_debug(query))
-        return self.response[-1].content.parts[0].text
+    def classify_sections(self, document_structure):
+        payload = {
+            "metadata": document_structure.get("metadata", {}),
+            "sections": [
+                {
+                    "title": section.get("title", ""),
+                    "content": section.get("content", ""),
+                    "start_page": section.get("start_page", 0),
+                    "end_page": section.get("end_page", 0),
+                }
+                for section in document_structure.get("sections", [])
+            ],
+        }
+        query = f"Classify each section into a standard category using both title and content. Return only valid JSON.\n\n{json.dumps(payload, ensure_ascii=False)}"
+        response = asyncio.run(self.runner.run_debug(query))
+        raw_text = response[-1].content.parts[0].text
+        return self._parse_agent_response(raw_text)
 
+    def _parse_agent_response(self, raw_text):
+        cleaned = raw_text.strip()
+        if cleaned.startswith("```"):
+            cleaned = cleaned.strip("`")
+            if cleaned.lower().startswith("json"):
+                cleaned = cleaned[4:].strip()
+        if cleaned.startswith("{") and cleaned.endswith("}"):
+            try:
+                return json.loads(cleaned)
+            except json.JSONDecodeError:
+                pass
+
+        start = cleaned.find("{")
+        end = cleaned.rfind("}")
+        if start != -1 and end != -1 and end > start:
+            try:
+                return json.loads(cleaned[start:end + 1])
+            except json.JSONDecodeError:
+                pass
+
+        return {"sections": []}
+
+    def final_json(self, pdf_path):
+        data = self.section_detector.final_section_output(pdf_path)
+        return self.classify_sections(data)
+        
 def main():
     agent = SectionClassifier()
-    section_deductor=SectionDetector()
     pdf_path = APP_DIR / "data" / "raw" / "DPR_SAMPLE.pdf"
     if not pdf_path.exists():
         pdf_path = APP_DIR / "data" / "raw" / "sample_dpr.pdf"
-    data=section_deductor.final_section_output(pdf_path)
-    chat1=agent.chat_section_classifier(data)
-    print("Response from Agent:", chat1)
+    print("Response from Agent:", agent.final_json(pdf_path))
 
 if __name__ == "__main__":
     main()

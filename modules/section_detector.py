@@ -15,12 +15,10 @@ from google.adk.tools import google_search
 from google.adk.runners import InMemoryRunner
 from google.genai import types
 from pdf_reader import PDFReader
+from document_schema import DocumentStructure, Section
 import asyncio
 
 load_dotenv()
-from pathlib import Path
-import importlib.util
-import asyncio
 
 class SectionDetector:
     
@@ -86,7 +84,6 @@ class SectionDetector:
         return response[-1].content.parts[0].text
     
     def classify_json(self, contents, json_data):
-        final_json = {}
         cleaned_text = contents.strip()
         if cleaned_text.startswith("```json"):
             cleaned_text = cleaned_text[7:]
@@ -98,33 +95,40 @@ class SectionDetector:
 
         cleaned_text = cleaned_text.strip()
 
+        page_text = json_data.get("page_text", {})
+        offset = self.get_page_offset(page_text)
+        metadata = {
+            "filename": json_data.get("filename", ""),
+            "resolved_path": json_data.get("resolved_path", ""),
+            "num_pages": json_data.get("num_pages", len(page_text)),
+        }
+
         try:
             parsed_sections = json.loads(cleaned_text)
-            page_text = json_data["page_text"]
-            sec = parsed_sections["sections"]
-            offset = self.get_page_offset(page_text)
-            print(f"Total pages: {len(page_text)}")
-            print(f"Keys: {list(page_text.keys())[:10]}")
+            sec = parsed_sections.get("sections", [])
+            sections = []
+
             for content in sec:
-                title = content["title"]
-                start_page = content["start_page"]
-                end_page = content["end_page"]
+                title = content.get("title", "")
+                start_page = int(content.get("start_page", 0))
+                end_page = int(content.get("end_page", 0))
 
-                matched_pages = [
-                    page_no
-                    for page_no in page_text.keys()
-                    if start_page + offset <= int(page_no) <= end_page + offset
-                ]
-
-                print(f"{title}: {matched_pages}")
-
-                final_json[title] = [
+                section_text = "\n\n".join(
                     text
                     for page_no, text in page_text.items()
                     if start_page + offset <= int(page_no) <= end_page + offset
-                ]
+                )
 
-            return final_json
+                sections.append(
+                    Section(
+                        title=title,
+                        start_page=start_page,
+                        end_page=end_page,
+                        content=section_text,
+                    )
+                )
+
+            return DocumentStructure(metadata=metadata, sections=sections).to_dict()
 
         except json.JSONDecodeError:
             start = cleaned_text.find("{")
@@ -184,13 +188,11 @@ class SectionDetector:
         response= asyncio.run(runner.run_debug(query))
         return response[-1].content.parts[0].text
 
-    def final_section_output(self,pdf_path):
-        self.agent = SectionDetector()
-        self.pdfreader = PDFReader()
+    def final_section_output(self, pdf_path):
         json_text = self.pdfreader.get_pdf_data(str(pdf_path))
-        page_content=self.agent.call_llm_for_structure(json_text)
-        contents=self.agent.toc_json(page_content)
-        return self.agent.classify_json(contents,json_text)
+        page_content = self.call_llm_for_structure(json_text)
+        contents = self.toc_json(page_content)
+        return self.classify_json(contents, json_text)
 
 def main():
     agent = SectionDetector()
