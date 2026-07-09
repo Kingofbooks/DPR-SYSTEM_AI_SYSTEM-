@@ -2,6 +2,7 @@ import os
 import sys
 from pathlib import Path
 import json
+import re
 
 APP_DIR = Path(__file__).resolve().parents[1]
 if str(APP_DIR) not in sys.path:
@@ -198,11 +199,63 @@ class CompletenessChecker:
                 return text[start:end].strip()
         return ""
 
+    def _looks_like_financial_table(self, content):
+        text = str(content or "")
+        lower_text = text.lower()
+
+        currency_pattern = r"(?:₹|rs\.?|inr)\s*\d[\d,]*(?:\.\d+)?"
+        number_pattern = r"\b\d[\d,]*(?:\.\d+)?\b"
+
+        currency_hits = len(re.findall(currency_pattern, lower_text, flags=re.IGNORECASE))
+        number_hits = len(re.findall(number_pattern, lower_text))
+
+        table_keywords = [
+            "cost table",
+            "capital cost",
+            "civil works",
+            "plant and machinery",
+            "plant equipment",
+            "breakup",
+            "breakdown",
+            "itemized",
+            "item-wise",
+            "component wise",
+            "head wise",
+            "contingency",
+            "subtotal",
+            "total",
+            "estimate",
+            "line item",
+        ]
+        keyword_hits = sum(1 for keyword in table_keywords if keyword in lower_text)
+
+        return currency_hits >= 1 and (number_hits >= 4 or keyword_hits >= 2)
+
     def _evaluate_section(self, section):
         category = str(section.get("category", "")).strip()
         title = str(section.get("title", "")).strip()
         content = str(section.get("content", "")).strip()
-        expected_items = self._expected_items_for_category(category)
+        expected_items = list(self._expected_items_for_category(category))
+
+        if category in {"Financial", "Budget"} and self._looks_like_financial_table(content):
+            expected_items.append(
+                {
+                    "item": "Detailed cost table",
+                    "weight": 2,
+                    "keywords": [
+                        "cost table",
+                        "breakup",
+                        "breakdown",
+                        "itemized",
+                        "line item",
+                        "subtotal",
+                        "total",
+                        "capital cost",
+                        "civil works",
+                        "plant equipment",
+                    ],
+                }
+            )
 
         if not expected_items:
             return {
