@@ -1,0 +1,28 @@
+{
+  "documents": {
+    "7e1357ca-a16c-411b-a714-3ec9fcafb907": {
+      "document_id": "7e1357ca-a16c-411b-a714-3ec9fcafb907",
+      "filename": "AI-Powered_DPR_Quality_Assessment_Conference_Paper.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\7e1357ca-a16c-411b-a714-3ec9fcafb907_AI-Powered_DPR_Quality_Assessment_Conference_Paper.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\7e1357ca-a16c-411b-a714-3ec9fcafb907",
+      "status": "processed",
+      "created_at": "2026-09-06T17:36:08.935927+00:00"
+    },
+    "6d1b00f0-acec-4e96-870c-08173440db4e": {
+      "document_id": "6d1b00f0-acec-4e96-870c-08173440db4e",
+      "filename": "BridgesDPRTemplate.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\6d1b00f0-acec-4e96-870c-08173440db4e_BridgesDPRTemplate.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\6d1b00f0-acec-4e96-870c-08173440db4e",
+      "status": "processed",
+      "created_at": "2026-09-06T17:38:43.052402+00:00"
+    },
+    "e652fa4a-8312-42f6-b761-52e1352e8cd9": {
+      "document_id": "e652fa4a-8312-42f6-b761-52e1352e8cd9",
+      "filename": "BridgesDPRTemplate.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\e652fa4a-8312-42f6-b761-52e1352e8cd9_BridgesDPRTemplate.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\e652fa4a-8312-42f6-b761-52e1352e8cd9",
+      "status": "processed",
+      "created_at": "2026-09-06T18:31:25.987797+00:00"
+    }
+  }
+}

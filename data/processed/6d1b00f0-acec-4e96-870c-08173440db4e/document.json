@@ -1,0 +1,279 @@
+{
+    "metadata": {
+        "filename": "6d1b00f0-acec-4e96-870c-08173440db4e_BridgesDPRTemplate.pdf",
+        "resolved_path": "F:\\DPR_AI-System\\data\\raw\\6d1b00f0-acec-4e96-870c-08173440db4e_BridgesDPRTemplate.pdf",
+        "num_pages": 14
+    },
+    "toc": {
+        "found": true,
+        "pages": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+        ],
+        "confidence": 0.75
+    },
+    "parsed_sections": [
+        {
+            "section_id": "1.",
+            "title": "SALIENT FEATURES",
+            "page_reference": null
+        },
+        {
+            "section_id": "15.",
+            "title": "Whether land accusation involved?",
+            "page_reference": null
+        },
+        {
+            "section_id": "2.",
+            "title": "EXECUTIVE SUMMARY:",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.",
+            "title": "CHAPTERS:",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.1",
+            "title": "INTRODUCTION",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.1",
+            "title": "1. Project Definition, Concept and Scope",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.1",
+            "title": "2. Project background",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.1",
+            "title": "3. Project Details",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.1",
+            "title": "4. Objective and scope of the work",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.2",
+            "title": "STATUS FEASIBILITY STUDIES",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.3",
+            "title": "REQUIREMENT/ DEMAND ANALYSIS",
+            "page_reference": null
+        },
+        {
+            "section_id": "3.4",
+            "title": "ENGINEERING SURVEYS AND INVESTIGATIONS",
+            "page_reference": null
+        },
+        {
+            "section_id": "1.",
+            "title": "Topographic Survey/leveling survey with GPS stations and coordinates",
+            "page_reference": null
+        }
+    ],
+    "mapped_sections": {
+        "sections": [
+            {
+                "section_id": "1.",
+                "title": "SALIENT FEATURES",
+                "page_reference": null,
+                "pdf_page": 11,
+                "confidence": 0.642
+            },
+            {
+                "section_id": "15.",
+                "title": "Whether land accusation involved?",
+                "page_reference": null,
+                "pdf_page": 12,
+                "confidence": 0.657
+            },
+            {
+                "section_id": "2.",
+                "title": "EXECUTIVE SUMMARY:",
+                "page_reference": null,
+                "pdf_page": 8,
+                "confidence": 0.638
+            },
+            {
+                "section_id": "3.",
+                "title": "CHAPTERS:",
+                "page_reference": null,
+                "pdf_page": 9,
+                "confidence": 0.634
+            },
+            {
+                "section_id": "3.1",
+                "title": "INTRODUCTION",
+                "page_reference": null,
+                "pdf_page": 11,
+                "confidence": 0.639
+            },
+            {
+                "section_id": "3.1",
+                "title": "1. Project Definition, Concept and Scope",
+                "page_reference": null,
+                "pdf_page": 11,
+                "confidence": 0.821
+            },
+            {
+                "section_id": "3.1",
+                "title": "2. Project background",
+                "page_reference": null,
+                "pdf_page": 10,
+                "confidence": 0.789
+            },
+            {
+                "section_id": "3.1",
+                "title": "3. Project Details",
+                "page_reference": null,
+                "pdf_page": 8,
+                "confidence": 0.804
+            },
+            {
+                "section_id": "3.1",
+                "title": "4. Objective and scope of the work",
+                "page_reference": null,
+                "pdf_page": 10,
+                "confidence": 0.82
+            },
+            {
+                "section_id": "3.2",
+                "title": "STATUS FEASIBILITY STUDIES",
+                "page_reference": null,
+                "pdf_page": null,
+                "confidence": 0.129
+            },
+            {
+                "section_id": "3.3",
+                "title": "REQUIREMENT/ DEMAND ANALYSIS",
+                "page_reference": null,
+                "pdf_page": 8,
+                "confidence": 0.837
+            },
+            {
+                "section_id": "3.4",
+                "title": "ENGINEERING SURVEYS AND INVESTIGATIONS",
+                "page_reference": null,
+                "pdf_page": 9,
+                "confidence": 0.856
+            },
+            {
+                "section_id": "1.",
+                "title": "Topographic Survey/leveling survey with GPS stations and coordinates",
+                "page_reference": null,
+                "pdf_page": 8,
+                "confidence": 0.843
+            }
+        ]
+    },
+    "sections": [
+        {
+            "section_id": "2.",
+            "title": "EXECUTIVE SUMMARY:",
+            "start_page": 8,
+            "end_page": 8,
+            "confidence": 0.638,
+            "content": "Page 9 of 14 \n \n2.   Leveling Survey with GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil and Materials Survey    : \ni.. Soil investigation report including    CBR details \nii.. Borrow area and quarry details ensuring the quality and quantity of materials,                 \nconstruction water sources \niii.. Soil sample collection and Testing     \n4. Traffic Survey \n                                                                                                                                                                                 \n3.5. FUNCTIONAL DESIGN \n \nThis section should present an analysis of different options available to achieve the \nobjective and the reasons for selecting the proposed option should be substantiated. \n \nThe functional design of the project is mainly achieved through field study and \ndocumentation using existing information and specifications from various standards \n \nThe location shall generally be governed by the approach that minimum shifting will \nbe required for improvements of geometrics, unless there are special bridge design \nproblems. The requirement of the most suitable site shall have overriding \nconsideration and the site so selected shall regulate the approach alignments. \n \nThe alignment shall be fixed with a view to serve maximum population and to achieve \nthe maximum utility of the existing road system, if any. The alignment shall preferably \nbe one which demands minimum land acquisition, minimum span length and filling \nheight of approaches, economic structural elements etc. \n \nHistory of hydraulic functioning of existing/nearby bridge, if any, under flood, general \ndirection of river course through the structure, afflux, extent and magnitude of flood, \naggradation / degradation of the bed, evidence of scour, damage to structure and \nadjacent property, maintenance problems and records of any other bridges across the \nsame river in the vicinity etc. shall be considered. \n \nThe number of supports and their locations shall be fixed as to provide the most \neconomical design of the bridge and at the same time satisfy special requirements, if \nany, for navigation, railways or other crossings in consultation with the concerned \nauthorities, floating logs or debris and bridge aesthetics, etc."
+        },
+        {
+            "section_id": "3.1",
+            "title": "3. Project Details",
+            "start_page": 8,
+            "end_page": 8,
+            "confidence": 0.804,
+            "content": "Page 9 of 14 \n \n2.   Leveling Survey with GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil and Materials Survey    : \ni.. Soil investigation report including    CBR details \nii.. Borrow area and quarry details ensuring the quality and quantity of materials,                 \nconstruction water sources \niii.. Soil sample collection and Testing     \n4. Traffic Survey \n                                                                                                                                                                                 \n3.5. FUNCTIONAL DESIGN \n \nThis section should present an analysis of different options available to achieve the \nobjective and the reasons for selecting the proposed option should be substantiated. \n \nThe functional design of the project is mainly achieved through field study and \ndocumentation using existing information and specifications from various standards \n \nThe location shall generally be governed by the approach that minimum shifting will \nbe required for improvements of geometrics, unless there are special bridge design \nproblems. The requirement of the most suitable site shall have overriding \nconsideration and the site so selected shall regulate the approach alignments. \n \nThe alignment shall be fixed with a view to serve maximum population and to achieve \nthe maximum utility of the existing road system, if any. The alignment shall preferably \nbe one which demands minimum land acquisition, minimum span length and filling \nheight of approaches, economic structural elements etc. \n \nHistory of hydraulic functioning of existing/nearby bridge, if any, under flood, general \ndirection of river course through the structure, afflux, extent and magnitude of flood, \naggradation / degradation of the bed, evidence of scour, damage to structure and \nadjacent property, maintenance problems and records of any other bridges across the \nsame river in the vicinity etc. shall be considered. \n \nThe number of supports and their locations shall be fixed as to provide the most \neconomical design of the bridge and at the same time satisfy special requirements, if \nany, for navigation, railways or other crossings in consultation with the concerned \nauthorities, floating logs or debris and bridge aesthetics, etc."
+        },
+        {
+            "section_id": "3.3",
+            "title": "REQUIREMENT/ DEMAND ANALYSIS",
+            "start_page": 8,
+            "end_page": 8,
+            "confidence": 0.837,
+            "content": "Page 9 of 14 \n \n2.   Leveling Survey with GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil and Materials Survey    : \ni.. Soil investigation report including    CBR details \nii.. Borrow area and quarry details ensuring the quality and quantity of materials,                 \nconstruction water sources \niii.. Soil sample collection and Testing     \n4. Traffic Survey \n                                                                                                                                                                                 \n3.5. FUNCTIONAL DESIGN \n \nThis section should present an analysis of different options available to achieve the \nobjective and the reasons for selecting the proposed option should be substantiated. \n \nThe functional design of the project is mainly achieved through field study and \ndocumentation using existing information and specifications from various standards \n \nThe location shall generally be governed by the approach that minimum shifting will \nbe required for improvements of geometrics, unless there are special bridge design \nproblems. The requirement of the most suitable site shall have overriding \nconsideration and the site so selected shall regulate the approach alignments. \n \nThe alignment shall be fixed with a view to serve maximum population and to achieve \nthe maximum utility of the existing road system, if any. The alignment shall preferably \nbe one which demands minimum land acquisition, minimum span length and filling \nheight of approaches, economic structural elements etc. \n \nHistory of hydraulic functioning of existing/nearby bridge, if any, under flood, general \ndirection of river course through the structure, afflux, extent and magnitude of flood, \naggradation / degradation of the bed, evidence of scour, damage to structure and \nadjacent property, maintenance problems and records of any other bridges across the \nsame river in the vicinity etc. shall be considered. \n \nThe number of supports and their locations shall be fixed as to provide the most \neconomical design of the bridge and at the same time satisfy special requirements, if \nany, for navigation, railways or other crossings in consultation with the concerned \nauthorities, floating logs or debris and bridge aesthetics, etc."
+        },
+        {
+            "section_id": "1.",
+            "title": "Topographic Survey/leveling survey with GPS stations and coordinates",
+            "start_page": 8,
+            "end_page": 8,
+            "confidence": 0.843,
+            "content": "Page 9 of 14 \n \n2.   Leveling Survey with GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil and Materials Survey    : \ni.. Soil investigation report including    CBR details \nii.. Borrow area and quarry details ensuring the quality and quantity of materials,                 \nconstruction water sources \niii.. Soil sample collection and Testing     \n4. Traffic Survey \n                                                                                                                                                                                 \n3.5. FUNCTIONAL DESIGN \n \nThis section should present an analysis of different options available to achieve the \nobjective and the reasons for selecting the proposed option should be substantiated. \n \nThe functional design of the project is mainly achieved through field study and \ndocumentation using existing information and specifications from various standards \n \nThe location shall generally be governed by the approach that minimum shifting will \nbe required for improvements of geometrics, unless there are special bridge design \nproblems. The requirement of the most suitable site shall have overriding \nconsideration and the site so selected shall regulate the approach alignments. \n \nThe alignment shall be fixed with a view to serve maximum population and to achieve \nthe maximum utility of the existing road system, if any. The alignment shall preferably \nbe one which demands minimum land acquisition, minimum span length and filling \nheight of approaches, economic structural elements etc. \n \nHistory of hydraulic functioning of existing/nearby bridge, if any, under flood, general \ndirection of river course through the structure, afflux, extent and magnitude of flood, \naggradation / degradation of the bed, evidence of scour, damage to structure and \nadjacent property, maintenance problems and records of any other bridges across the \nsame river in the vicinity etc. shall be considered. \n \nThe number of supports and their locations shall be fixed as to provide the most \neconomical design of the bridge and at the same time satisfy special requirements, if \nany, for navigation, railways or other crossings in consultation with the concerned \nauthorities, floating logs or debris and bridge aesthetics, etc."
+        },
+        {
+            "section_id": "3.",
+            "title": "CHAPTERS:",
+            "start_page": 9,
+            "end_page": 9,
+            "confidence": 0.634,
+            "content": "Page 10 of 14 \n \n \nThe span arrangement of the bridge shall be considered as one which results in \nminimum construction cost with respect to the actual site conditions like width of river, \nhydraulic parameters, geotechnical aspects etc. \n \nThe field study shall also include traffic surveys and documentation which may be \ndone as per the latest revisions and amendments of the relevant guidelines of \nMoRTH, publications of Indian Roads Congress (IRC) and Bureau of Indian \nStandards (BIS).   \n3.6. ENGINEERING DESIGN \n \nThis section should elaborate the technology choices, structural aspects, substructure \noptions and evaluation of the technology option, as well as the basis for the \ntechnology for the proposed project. \n \nThe design should cover proposed alignment plan, longitudinal profile, cross section \ndetails, location map, index map, proposed culvert drawings, strip plan \n \nDetailed description of site including hydraulic and geotechnical investigations \nadequate to design the suitable foundation and substructure shall be furnished. \n \nThe type of the bridge shall be so selected that the viability of adopting state of the art \nsuper structures like continuous span bridge, integral bridge, long span arch bridge, \nbalanced cantilever bridge etc. shall be explored with a view to bring in aesthetics as \nwell as economy. \n \nThe selection between RCC and PSC structural systems shall be judiciously made \ndepending upon the span arrangement and economic considerations. \n \nThe preliminary design for a typical bridge project shall consist of alignment, complete \nGAD with all relevant details including that of approaches, extend of flexible \npavement, rigid pavement, etc. conforming to the guidelines laid down in the latest \nrevisions and amendments of IRC, MoRTH and BIS. \n3.7. FINANCIAL ESTIMATES & COST PROJECTIONS \n \nThis section should focus on the cost estimates, budget for the project, means of \nfinancing and phasing of expenditure. \n \nCost estimates have to be worked out on the basis of detailed bill of quantities (with \ndetailed measurements of length, breadth, and depth / height for each item), using"
+        },
+        {
+            "section_id": "3.4",
+            "title": "ENGINEERING SURVEYS AND INVESTIGATIONS",
+            "start_page": 9,
+            "end_page": 9,
+            "confidence": 0.856,
+            "content": "Page 10 of 14 \n \n \nThe span arrangement of the bridge shall be considered as one which results in \nminimum construction cost with respect to the actual site conditions like width of river, \nhydraulic parameters, geotechnical aspects etc. \n \nThe field study shall also include traffic surveys and documentation which may be \ndone as per the latest revisions and amendments of the relevant guidelines of \nMoRTH, publications of Indian Roads Congress (IRC) and Bureau of Indian \nStandards (BIS).   \n3.6. ENGINEERING DESIGN \n \nThis section should elaborate the technology choices, structural aspects, substructure \noptions and evaluation of the technology option, as well as the basis for the \ntechnology for the proposed project. \n \nThe design should cover proposed alignment plan, longitudinal profile, cross section \ndetails, location map, index map, proposed culvert drawings, strip plan \n \nDetailed description of site including hydraulic and geotechnical investigations \nadequate to design the suitable foundation and substructure shall be furnished. \n \nThe type of the bridge shall be so selected that the viability of adopting state of the art \nsuper structures like continuous span bridge, integral bridge, long span arch bridge, \nbalanced cantilever bridge etc. shall be explored with a view to bring in aesthetics as \nwell as economy. \n \nThe selection between RCC and PSC structural systems shall be judiciously made \ndepending upon the span arrangement and economic considerations. \n \nThe preliminary design for a typical bridge project shall consist of alignment, complete \nGAD with all relevant details including that of approaches, extend of flexible \npavement, rigid pavement, etc. conforming to the guidelines laid down in the latest \nrevisions and amendments of IRC, MoRTH and BIS. \n3.7. FINANCIAL ESTIMATES & COST PROJECTIONS \n \nThis section should focus on the cost estimates, budget for the project, means of \nfinancing and phasing of expenditure. \n \nCost estimates have to be worked out on the basis of detailed bill of quantities (with \ndetailed measurements of length, breadth, and depth / height for each item), using"
+        },
+        {
+            "section_id": "3.1",
+            "title": "2. Project background",
+            "start_page": 10,
+            "end_page": 10,
+            "confidence": 0.789,
+            "content": "Page 11 of 14 \n \nthe current Schedule of Rates of the State Government (PRICE) or relevant SOR as \napplicable. \n \nApplicable taxes, contingencies, investigation charges including any O&M cost for a \nspecific period shall be clearly specified. \n \nLump sum provisions for land acquisition etc. shall be explained in detail. \n3.8. REVENUE STREAMS \n \nOptions for cost recovery, if any, should be explored \n \nInnovative ideas for additional revenue generation including advertisements, parking \nfacilities below the deck etc, may be indicated. \n3.9. COST BENEFIT ANALYSIS& INVESTMENT CRITERIA \n \nCost Benefit Analysis (CBA) is a technique whereby the costs of and benefits from a \nscheme are quantified over a selected time horizon and evaluated by a common \nyardstick. \n \nIn bridge project appraisal, it is important first to study the present traffic flow pattern, \ncomprising of: 1) service across the river by a small ferry, carrying passengers and \nlight vehicles, and/or 2) detouring of vehicles by alternate route, generally over long \ndistance.  \n \nThis will be followed by forecast of average daily traffic over the proposed bridge for \nthe time horizon of the study. This will represent the normal traffic growth and the \nvolume generated by the proposed bridge.  \n \nCost Benefit Ratio (CBR - benefit to cost ratio), EIRR (Economic Internal Rate of \nReturn) etc. shall be worked out in detail with all supporting primary and secondary \ndata conforming to the guidelines of IRC: SP 30 - 2009. \n \nThe project cash flow projections for the life cycle along with underlying assumptions \nhave to be presented. \n3.10. ENVIRONMENTAL & SUSTAINABILITY ASPECTS \n \nAn Environmental Management Plan (EMP) is to be developed explaining the \npossible environmental issues which may arise during the construction and operation \nof the infrastructure and associated facilities depending upon the size of the project."
+        },
+        {
+            "section_id": "3.1",
+            "title": "4. Objective and scope of the work",
+            "start_page": 10,
+            "end_page": 10,
+            "confidence": 0.82,
+            "content": "ng assumptions \nhave to be presented. \n3.10. ENVIRONMENTAL & SUSTAINABILITY ASPECTS \n \nAn Environmental Management Plan (EMP) is to be developed explaining the \npossible environmental issues which may arise during the construction and operation \nof the infrastructure and associated facilities depending upon the size of the project."
+        },
+        {
+            "section_id": "1.",
+            "title": "SALIENT FEATURES",
+            "start_page": 11,
+            "end_page": 11,
+            "confidence": 0.642,
+            "content": "Page 12 of 14 \n \n \nEnvironmental impact assessment study if mandatory and measures identified to \nmitigate the adverse impact, if any shall be conducted and documented in detail. \n \nIssues relating to land acquisition, diversion of forest land, wildlife clearances, \nrehabilitation and resettlement should be addressed in this section. \n \nInclusion of international best practices in sustainable infrastructure management \nincluding potential low carbon, low energy, zero pollution etc. is desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large capital outlay and various issues relating to \nland acquisition, environmental aspects, a detailed and systematic risk analysis may \nbe resorted. \n \nIdentification and assessment of implementations risks which can lead to time \noverrun, cost escalation, scope reduction etc. is the primary stage in risk assessment. \n \n Risk analysis could include legal/contractual risks, environmental risks, revenue \nrisks, project management risks, regulatory risks etc. \n \nThe mitigation plans including risk avoidance, risk transfer, and risk elimination are to \nbe well analyzed and documented. \n \nFor complex projects with multiple risk profiles, numerical modeling and simulation \nmay be adopted.. \n3.12. PROJECT MANAGEMENT ORGANISATION  \n \nResponsibilities of different agencies for project management of the said project \nshould be elaborated. The organization structure at various levels, human resource \nrequirements, as well as monitoring arrangements should be clearly spelt out. \n \nManagement arrangements refer to the institutional structures and mechanisms that \nwould be set up for ensuring effective project management. \n \nThe involvement of external consultant if any shall be documented \n3.13. CONTRACT MANAGEMENT STRATEGY \n \nContracting methodology for the execution of the project should be specified in detail. \n(item rate, lumpsum,  design and execute , EPC etc.) \n \nThe system followed in the bidding document and manuals of reference etc. shall be \nexplained (PWD/CPWD/ FIDIC) etc."
+        },
+        {
+            "section_id": "3.1",
+            "title": "INTRODUCTION",
+            "start_page": 11,
+            "end_page": 11,
+            "confidence": 0.639,
+            "content": "Page 12 of 14 \n \n \nEnvironmental impact assessment study if mandatory and measures identified to \nmitigate the adverse impact, if any shall be conducted and documented in detail. \n \nIssues relating to land acquisition, diversion of forest land, wildlife clearances, \nrehabilitation and resettlement should be addressed in this section. \n \nInclusion of international best practices in sustainable infrastructure management \nincluding potential low carbon, low energy, zero pollution etc. is desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large capital outlay and various issues relating to \nland acquisition, environmental aspects, a detailed and systematic risk analysis may \nbe resorted. \n \nIdentification and assessment of implementations risks which can lead to time \noverrun, cost escalation, scope reduction etc. is the primary stage in risk assessment. \n \n Risk analysis could include legal/contractual risks, environmental risks, revenue \nrisks, project management risks, regulatory risks etc. \n \nThe mitigation plans including risk avoidance, risk transfer, and risk elimination are to \nbe well analyzed and documented. \n \nFor complex projects with multiple risk profiles, numerical modeling and simulation \nmay be adopted.. \n3.12. PROJECT MANAGEMENT ORGANISATION  \n \nResponsibilities of different agencies for project management of the said project \nshould be elaborated. The organization structure at various levels, human resource \nrequirements, as well as monitoring arrangements should be clearly spelt out. \n \nManagement arrangements refer to the institutional structures and mechanisms that \nwould be set up for ensuring effective project management. \n \nThe involvement of external consultant if any shall be documented \n3.13. CONTRACT MANAGEMENT STRATEGY \n \nContracting methodology for the execution of the project should be specified in detail. \n(item rate, lumpsum,  design and execute , EPC etc.) \n \nThe system followed in the bidding document and manuals of reference etc. shall be \nexplained (PWD/CPWD/ FIDIC) etc."
+        },
+        {
+            "section_id": "3.1",
+            "title": "1. Project Definition, Concept and Scope",
+            "start_page": 11,
+            "end_page": 11,
+            "confidence": 0.821,
+            "content": "desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large capital outlay and various issues relating to \nland acquisition, environmental aspects, a detailed and systematic risk analysis may \nbe resorted. \n \nIdentification and assessment of implementations risks which can lead to time \noverrun, cost escalation, scope reduction etc. is the primary stage in risk assessment. \n \n Risk analysis could include legal/contractual risks, environmental risks, revenue \nrisks, project management risks, regulatory risks etc. \n \nThe mitigation plans including risk avoidance, risk transfer, and risk elimination are to \nbe well analyzed and documented. \n \nFor complex projects with multiple risk profiles, numerical modeling and simulation \nmay be adopted.. \n3.12. PROJECT MANAGEMENT ORGANISATION  \n \nResponsibilities of different agencies for project management of the said project \nshould be elaborated. The organization structure at various levels, human resource \nrequirements, as well as monitoring arrangements should be clearly spelt out. \n \nManagement arrangements refer to the institutional structures and mechanisms that \nwould be set up for ensuring effective project management. \n \nThe involvement of external consultant if any shall be documented \n3.13. CONTRACT MANAGEMENT STRATEGY \n \nContracting methodology for the execution of the project should be specified in detail. \n(item rate, lumpsum,  design and execute , EPC etc.) \n \nThe system followed in the bidding document and manuals of reference etc. shall be \nexplained (PWD/CPWD/ FIDIC) etc."
+        },
+        {
+            "section_id": "15.",
+            "title": "Whether land accusation involved?",
+            "start_page": 12,
+            "end_page": 13,
+            "confidence": 0.657,
+            "content": "uding project delivery \n3.15. STATUTORY CLEARANCES \n \nThis section should elaborate the statutory clearances to be obtained from the various \nauthorities. \n \nStatutory approvals as per bye laws, master plan, fire safety norms, environmental \nclearance etc. as applicable for the project are to be taken. \n3.16. QUALITY MANAGEMENT PLAN \n \nThe DPR shall include information relating to the institution to be engaged in the \nquality assurance & quality control of the project execution. \n \nMethodology to be adopted to ensure the quality of construction should be clearly \nmentioned in the report. \n \nQuality management plan including the internal inspection and testing procedure shall \nbe documented.\nPage 14 of 14 \n \n \nThird party quality control mechanism is adopted its structure and plan shall be \nspecified in detail. \n3.17. OPERATIONS & MAINTENANCE PLAN \n \nThe DPR shall incorporate/include information relating to the institution to be \nengaged in the O&M of the created infrastructure asset/enhanced infrastructure \nassets. \n \nBrief description/analysis of the key issues and obstacles in regard to O&M \n(including billing/collection issues) and proposed countermeasures to overcome \nthem for the project should be contained. \n \nRequirement of funds for operation and maintenance of assets should also be \nincluded in the report. \n \n \nANNEXURES \nI. \nKEY MAP OF THE PROJECT LOCATION \nII. \nAPPROVED ALIGNMENT DRAWING \nIII. \nGENERAL ARRANGEMENT DRAWING \nIV. \nDETAILED ESTIMATE \nV. \nGEO-TECHNICAL INVESTIGATION REPORT \nVI. \nHYDRAULIC INVESTIGATION REPORT \nVII. \nCOPIES OF STATUTORY APPROVALS"
+        }
+    ]
+}

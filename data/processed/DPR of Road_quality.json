@@ -1,0 +1,463 @@
+{
+    "metadata": {
+        "filename": "DPR of Road.pdf",
+        "total_sections": 12
+    },
+    "document_quality_score": 0.889,
+    "document_quality_percentage": 88.9,
+    "average_section_quality": 0.876,
+    "document_quality_level": "EXCELLENT",
+    "weak_sections": [],
+    "excellent_sections": [
+        {
+            "section_id": "E.6",
+            "title": "Land Use",
+            "quality_score": 1.0
+        },
+        {
+            "section_id": "E.7",
+            "title": "Cross Sectional Element -6",
+            "quality_score": 0.96
+        },
+        {
+            "section_id": "E.13(B)",
+            "title": "Guide Bund of the Proposed Bridge",
+            "quality_score": 0.96
+        },
+        {
+            "section_id": "E.16",
+            "title": "Culverts and Bridges",
+            "quality_score": 0.925
+        },
+        {
+            "section_id": "E.17",
+            "title": "Traffic Signs, Markings and other Road Furniture",
+            "quality_score": 0.895
+        },
+        {
+            "section_id": "E.19",
+            "title": "Summary of EIA",
+            "quality_score": 0.91
+        },
+        {
+            "section_id": "E.20",
+            "title": "Economic Analysis",
+            "quality_score": 0.88
+        },
+        {
+            "section_id": "E.10",
+            "title": "Pavement Design -8",
+            "quality_score": 1.0
+        }
+    ],
+    "sections": [
+        {
+            "section_id": "E.6",
+            "title": "Land Use",
+            "quality_score": 1.0,
+            "quality_percentage": 100.0,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 1389,
+                    "score": 1.0,
+                    "level": "GOOD"
+                },
+                "content_density": {
+                    "word_count": 182,
+                    "unique_word_count": 111,
+                    "density": 0.61,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 11,
+                    "score": 1.0
+                },
+                "structural_quality": {
+                    "paragraph_count": 34,
+                    "heading_candidates": 5,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0079,
+                    "suspicious_characters": 11,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.7",
+            "title": "Cross Sectional Element -6",
+            "quality_score": 0.96,
+            "quality_percentage": 96.0,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 5486,
+                    "score": 1.0,
+                    "level": "GOOD"
+                },
+                "content_density": {
+                    "word_count": 723,
+                    "unique_word_count": 278,
+                    "density": 0.385,
+                    "score": 0.8
+                },
+                "numerical_evidence": {
+                    "numbers_found": 119,
+                    "score": 1.0
+                },
+                "structural_quality": {
+                    "paragraph_count": 155,
+                    "heading_candidates": 42,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0069,
+                    "suspicious_characters": 38,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.13",
+            "title": "Structural Measures as suggested by the",
+            "quality_score": 0.73,
+            "quality_percentage": 73.0,
+            "quality_level": "GOOD",
+            "metrics": {
+                "content_length": {
+                    "character_count": 255,
+                    "score": 0.4,
+                    "level": "VERY_SHORT"
+                },
+                "content_density": {
+                    "word_count": 38,
+                    "unique_word_count": 25,
+                    "density": 0.658,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 0,
+                    "score": 0.2
+                },
+                "structural_quality": {
+                    "paragraph_count": 5,
+                    "heading_candidates": 2,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0,
+                    "suspicious_characters": 0,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.13(A)",
+            "title": "River Training",
+            "quality_score": 0.694,
+            "quality_percentage": 69.4,
+            "quality_level": "MODERATE",
+            "metrics": {
+                "content_length": {
+                    "character_count": 207,
+                    "score": 0.4,
+                    "level": "VERY_SHORT"
+                },
+                "content_density": {
+                    "word_count": 31,
+                    "unique_word_count": 19,
+                    "density": 0.613,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 0,
+                    "score": 0.2
+                },
+                "structural_quality": {
+                    "paragraph_count": 4,
+                    "heading_candidates": 1,
+                    "score": 0.82
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0048,
+                    "suspicious_characters": 1,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.13(B)",
+            "title": "Guide Bund of the Proposed Bridge",
+            "quality_score": 0.96,
+            "quality_percentage": 96.0,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 1047,
+                    "score": 1.0,
+                    "level": "GOOD"
+                },
+                "content_density": {
+                    "word_count": 152,
+                    "unique_word_count": 76,
+                    "density": 0.5,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 20,
+                    "score": 1.0
+                },
+                "structural_quality": {
+                    "paragraph_count": 24,
+                    "heading_candidates": 6,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0134,
+                    "suspicious_characters": 14,
+                    "score": 0.8
+                }
+            }
+        },
+        {
+            "section_id": "E.16",
+            "title": "Culverts and Bridges",
+            "quality_score": 0.925,
+            "quality_percentage": 92.5,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 395,
+                    "score": 0.7,
+                    "level": "ADEQUATE"
+                },
+                "content_density": {
+                    "word_count": 47,
+                    "unique_word_count": 38,
+                    "density": 0.809,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 14,
+                    "score": 1.0
+                },
+                "structural_quality": {
+                    "paragraph_count": 15,
+                    "heading_candidates": 7,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0025,
+                    "suspicious_characters": 1,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.17",
+            "title": "Traffic Signs, Markings and other Road Furniture",
+            "quality_score": 0.895,
+            "quality_percentage": 89.5,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 710,
+                    "score": 0.7,
+                    "level": "ADEQUATE"
+                },
+                "content_density": {
+                    "word_count": 99,
+                    "unique_word_count": 65,
+                    "density": 0.657,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 7,
+                    "score": 0.8
+                },
+                "structural_quality": {
+                    "paragraph_count": 11,
+                    "heading_candidates": 1,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0014,
+                    "suspicious_characters": 1,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.18",
+            "title": "Land Acquisition",
+            "quality_score": 0.835,
+            "quality_percentage": 83.5,
+            "quality_level": "GOOD",
+            "metrics": {
+                "content_length": {
+                    "character_count": 307,
+                    "score": 0.7,
+                    "level": "ADEQUATE"
+                },
+                "content_density": {
+                    "word_count": 46,
+                    "unique_word_count": 35,
+                    "density": 0.761,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 1,
+                    "score": 0.4
+                },
+                "structural_quality": {
+                    "paragraph_count": 7,
+                    "heading_candidates": 2,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0,
+                    "suspicious_characters": 0,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.19",
+            "title": "Summary of EIA",
+            "quality_score": 0.91,
+            "quality_percentage": 91.0,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 1408,
+                    "score": 1.0,
+                    "level": "GOOD"
+                },
+                "content_density": {
+                    "word_count": 197,
+                    "unique_word_count": 107,
+                    "density": 0.543,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 1,
+                    "score": 0.4
+                },
+                "structural_quality": {
+                    "paragraph_count": 21,
+                    "heading_candidates": 1,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0036,
+                    "suspicious_characters": 5,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.21",
+            "title": "Consultancy",
+            "quality_score": 0.724,
+            "quality_percentage": 72.4,
+            "quality_level": "GOOD",
+            "metrics": {
+                "content_length": {
+                    "character_count": 162,
+                    "score": 0.4,
+                    "level": "VERY_SHORT"
+                },
+                "content_density": {
+                    "word_count": 23,
+                    "unique_word_count": 21,
+                    "density": 0.913,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 1,
+                    "score": 0.4
+                },
+                "structural_quality": {
+                    "paragraph_count": 3,
+                    "heading_candidates": 1,
+                    "score": 0.82
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0,
+                    "suspicious_characters": 0,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.20",
+            "title": "Economic Analysis",
+            "quality_score": 0.88,
+            "quality_percentage": 88.0,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 88283,
+                    "score": 1.0,
+                    "level": "GOOD"
+                },
+                "content_density": {
+                    "word_count": 12414,
+                    "unique_word_count": 2125,
+                    "density": 0.171,
+                    "score": 0.4
+                },
+                "numerical_evidence": {
+                    "numbers_found": 1361,
+                    "score": 1.0
+                },
+                "structural_quality": {
+                    "paragraph_count": 1784,
+                    "heading_candidates": 335,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0026,
+                    "suspicious_characters": 230,
+                    "score": 1.0
+                }
+            }
+        },
+        {
+            "section_id": "E.10",
+            "title": "Pavement Design -8",
+            "quality_score": 1.0,
+            "quality_percentage": 100.0,
+            "quality_level": "EXCELLENT",
+            "metrics": {
+                "content_length": {
+                    "character_count": 2659,
+                    "score": 1.0,
+                    "level": "GOOD"
+                },
+                "content_density": {
+                    "word_count": 383,
+                    "unique_word_count": 184,
+                    "density": 0.48,
+                    "score": 1.0
+                },
+                "numerical_evidence": {
+                    "numbers_found": 34,
+                    "score": 1.0
+                },
+                "structural_quality": {
+                    "paragraph_count": 56,
+                    "heading_candidates": 15,
+                    "score": 1.0
+                },
+                "text_quality": {
+                    "noise_ratio": 0.0026,
+                    "suspicious_characters": 7,
+                    "score": 1.0
+                }
+            }
+        }
+    ]
+}

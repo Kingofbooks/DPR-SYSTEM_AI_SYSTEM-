@@ -1,0 +1,31 @@
+{
+    "metadata": {
+        "filename": "Unknown Document"
+    },
+    "risk_assessment": {
+        "risk_score": 0.1112,
+        "risk_percentage": 11.12,
+        "risk_level": "LOW",
+        "component_risks": {
+            "completeness_risk": 0.0633,
+            "quality_risk": 0.1545,
+            "health_risk": 0.1034,
+            "weakness_risk": 0.0724,
+            "consistency_risk": 0.2249
+        },
+        "risk_factors": [
+            {
+                "factor": "At least one section has moderate quality",
+                "value": 0.694,
+                "severity": "MEDIUM"
+            }
+        ],
+        "positive_factors": [
+            "High document completeness",
+            "Strong overall document quality",
+            "Strong overall document health",
+            "Majority of sections have excellent quality",
+            "No weak sections detected"
+        ]
+    }
+}

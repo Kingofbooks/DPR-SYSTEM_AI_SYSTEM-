@@ -1,0 +1,35 @@
+{
+    "metadata": {
+        "filename": "7e1357ca-a16c-411b-a714-3ec9fcafb907_AI-Powered_DPR_Quality_Assessment_Conference_Paper.pdf",
+        "resolved_path": "F:\\DPR_AI-System\\data\\raw\\7e1357ca-a16c-411b-a714-3ec9fcafb907_AI-Powered_DPR_Quality_Assessment_Conference_Paper.pdf",
+        "num_pages": 5
+    },
+    "toc": {
+        "found": true,
+        "pages": [
+            2,
+            3,
+            4
+        ],
+        "confidence": 0.75
+    },
+    "parsed_sections": [
+        {
+            "section_id": "75.00",
+            "title": ", and Financial at 50.00, together with present and",
+            "page_reference": null
+        }
+    ],
+    "mapped_sections": {
+        "sections": [
+            {
+                "section_id": "75.00",
+                "title": ", and Financial at 50.00, together with present and",
+                "page_reference": null,
+                "pdf_page": null,
+                "confidence": 0.0
+            }
+        ]
+    },
+    "sections": []
+}

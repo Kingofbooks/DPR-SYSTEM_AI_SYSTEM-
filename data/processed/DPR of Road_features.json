@@ -1,0 +1,23 @@
+{
+    "document": "DPR of Road.pdf",
+    "feature_count": 17,
+    "features": {
+        "completeness_score": 0.875,
+        "critical_completeness": 0.9167,
+        "weighted_completeness": 0.9042,
+        "found_section_ratio": 0.0,
+        "missing_section_ratio": 0.0,
+        "critical_missing_ratio": 0.0,
+        "document_quality_score": 0.889,
+        "average_section_quality": 0.876,
+        "weak_section_ratio": 0.0,
+        "excellent_section_ratio": 0.666667,
+        "min_section_quality": 0.694,
+        "max_section_quality": 1.0,
+        "section_quality_range": 0.306,
+        "section_quality_std_proxy": 0.103289,
+        "overall_document_health": 0.8966,
+        "completeness_quality_gap": 0.0152,
+        "document_weakness_score": 0.1034
+    }
+}
