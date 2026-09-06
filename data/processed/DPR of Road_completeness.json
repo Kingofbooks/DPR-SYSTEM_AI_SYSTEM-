@@ -1,0 +1,363 @@
+{
+    "metadata": {
+        "filename": "DPR of Road.pdf",
+        "template": "road_dpr",
+        "document_section_count": 12,
+        "expected_section_count": 16
+    },
+    "summary": {
+        "total_expected_sections": 16,
+        "found_sections": 14,
+        "missing_sections": 2,
+        "critical_sections": 12,
+        "critical_sections_found": 11,
+        "critical_sections_missing": 1
+    },
+    "scores": {
+        "completeness_score": 0.875,
+        "completeness_percentage": 87.5,
+        "critical_completeness_score": 0.9167,
+        "critical_completeness_percentage": 91.67,
+        "weighted_completeness_score": 0.9042,
+        "weighted_completeness_percentage": 90.42
+    },
+    "completeness_level": "EXCELLENT",
+    "found_sections": [
+        {
+            "id": "project_overview",
+            "name": "Project Overview",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "introduction",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "project_location",
+            "name": "Project Location",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.7",
+            "matched_section_title": "Cross Sectional Element -6",
+            "matched_keyword": "location",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "existing_conditions",
+            "name": "Existing Conditions",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "existing road",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "traffic_analysis",
+            "name": "Traffic Analysis",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "traffic survey",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "alignment",
+            "name": "Road Alignment",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.6",
+            "matched_section_title": "Land Use",
+            "matched_keyword": "alignment",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "design_standards",
+            "name": "Design Standards",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.6",
+            "matched_section_title": "Land Use",
+            "matched_keyword": "design standards",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "cross_section",
+            "name": "Cross Sectional Elements",
+            "critical": false,
+            "status": "FOUND",
+            "matched_section_id": "E.7",
+            "matched_section_title": "Cross Sectional Element -6",
+            "matched_keyword": "cross sectional",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "pavement_design",
+            "name": "Pavement Design",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.10",
+            "matched_section_title": "Pavement Design -8",
+            "matched_keyword": "pavement design",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "bridges_structures",
+            "name": "Bridges and Structures",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.13(B)",
+            "matched_section_title": "Guide Bund of the Proposed Bridge",
+            "matched_keyword": "bridge",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "environmental_impact",
+            "name": "Environmental Impact",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.19",
+            "matched_section_title": "Summary of EIA",
+            "matched_keyword": "eia",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "land_acquisition",
+            "name": "Land Acquisition",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.18",
+            "matched_section_title": "Land Acquisition",
+            "matched_keyword": "land acquisition",
+            "match_confidence": 1.0
+        },
+        {
+            "id": "economic_analysis",
+            "name": "Economic Analysis",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "economic analysis",
+            "match_confidence": 1.0
+        },
+        {
+            "id": "road_safety",
+            "name": "Road Safety",
+            "critical": false,
+            "status": "FOUND",
+            "matched_section_id": "E.17",
+            "matched_section_title": "Traffic Signs, Markings and other Road Furniture",
+            "matched_keyword": "traffic signs",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "consultancy",
+            "name": "Consultancy",
+            "critical": false,
+            "status": "FOUND",
+            "matched_section_id": "E.21",
+            "matched_section_title": "Consultancy",
+            "matched_keyword": "consultancy",
+            "match_confidence": 1.0
+        }
+    ],
+    "missing_sections": [
+        {
+            "id": "cost_estimate",
+            "name": "Cost Estimate",
+            "critical": true,
+            "status": "MISSING",
+            "matched_section_id": null,
+            "matched_section_title": null,
+            "matched_keyword": null,
+            "match_confidence": 0.0
+        },
+        {
+            "id": "implementation_schedule",
+            "name": "Implementation Schedule",
+            "critical": false,
+            "status": "MISSING",
+            "matched_section_id": null,
+            "matched_section_title": null,
+            "matched_keyword": null,
+            "match_confidence": 0.0
+        }
+    ],
+    "critical_missing_sections": [
+        {
+            "id": "cost_estimate",
+            "name": "Cost Estimate",
+            "critical": true,
+            "status": "MISSING",
+            "matched_section_id": null,
+            "matched_section_title": null,
+            "matched_keyword": null,
+            "match_confidence": 0.0
+        }
+    ],
+    "assessment_details": [
+        {
+            "id": "project_overview",
+            "name": "Project Overview",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "introduction",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "project_location",
+            "name": "Project Location",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.7",
+            "matched_section_title": "Cross Sectional Element -6",
+            "matched_keyword": "location",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "existing_conditions",
+            "name": "Existing Conditions",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "existing road",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "traffic_analysis",
+            "name": "Traffic Analysis",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "traffic survey",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "alignment",
+            "name": "Road Alignment",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.6",
+            "matched_section_title": "Land Use",
+            "matched_keyword": "alignment",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "design_standards",
+            "name": "Design Standards",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.6",
+            "matched_section_title": "Land Use",
+            "matched_keyword": "design standards",
+            "match_confidence": 0.7
+        },
+        {
+            "id": "cross_section",
+            "name": "Cross Sectional Elements",
+            "critical": false,
+            "status": "FOUND",
+            "matched_section_id": "E.7",
+            "matched_section_title": "Cross Sectional Element -6",
+            "matched_keyword": "cross sectional",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "pavement_design",
+            "name": "Pavement Design",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.10",
+            "matched_section_title": "Pavement Design -8",
+            "matched_keyword": "pavement design",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "bridges_structures",
+            "name": "Bridges and Structures",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.13(B)",
+            "matched_section_title": "Guide Bund of the Proposed Bridge",
+            "matched_keyword": "bridge",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "environmental_impact",
+            "name": "Environmental Impact",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.19",
+            "matched_section_title": "Summary of EIA",
+            "matched_keyword": "eia",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "land_acquisition",
+            "name": "Land Acquisition",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.18",
+            "matched_section_title": "Land Acquisition",
+            "matched_keyword": "land acquisition",
+            "match_confidence": 1.0
+        },
+        {
+            "id": "economic_analysis",
+            "name": "Economic Analysis",
+            "critical": true,
+            "status": "FOUND",
+            "matched_section_id": "E.20",
+            "matched_section_title": "Economic Analysis",
+            "matched_keyword": "economic analysis",
+            "match_confidence": 1.0
+        },
+        {
+            "id": "cost_estimate",
+            "name": "Cost Estimate",
+            "critical": true,
+            "status": "MISSING",
+            "matched_section_id": null,
+            "matched_section_title": null,
+            "matched_keyword": null,
+            "match_confidence": 0.0
+        },
+        {
+            "id": "implementation_schedule",
+            "name": "Implementation Schedule",
+            "critical": false,
+            "status": "MISSING",
+            "matched_section_id": null,
+            "matched_section_title": null,
+            "matched_keyword": null,
+            "match_confidence": 0.0
+        },
+        {
+            "id": "road_safety",
+            "name": "Road Safety",
+            "critical": false,
+            "status": "FOUND",
+            "matched_section_id": "E.17",
+            "matched_section_title": "Traffic Signs, Markings and other Road Furniture",
+            "matched_keyword": "traffic signs",
+            "match_confidence": 0.95
+        },
+        {
+            "id": "consultancy",
+            "name": "Consultancy",
+            "critical": false,
+            "status": "FOUND",
+            "matched_section_id": "E.21",
+            "matched_section_title": "Consultancy",
+            "matched_keyword": "consultancy",
+            "match_confidence": 1.0
+        }
+    ]
+}
