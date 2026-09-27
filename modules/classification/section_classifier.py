@@ -141,6 +141,13 @@ class SectionClassifier:
             cleaned = cleaned.strip("`")
             if cleaned.lower().startswith("json"):
                 cleaned = cleaned[4:].strip()
+        if cleaned.startswith("[") and cleaned.endswith("]"):
+            try:
+                sections = json.loads(cleaned)
+                if isinstance(sections, list):
+                    return {"sections": sections}
+            except json.JSONDecodeError:
+                pass
         if cleaned.startswith("{") and cleaned.endswith("}"):
             try:
                 return json.loads(cleaned)

@@ -23,6 +23,38 @@
       "processed_path": "F:\\DPR_AI-System\\data\\processed\\e652fa4a-8312-42f6-b761-52e1352e8cd9",
       "status": "processed",
       "created_at": "2026-09-06T18:31:25.987797+00:00"
+    },
+    "c5892319-4c06-4a2d-8b48-09afa6b930b1": {
+      "document_id": "c5892319-4c06-4a2d-8b48-09afa6b930b1",
+      "filename": "dpr-kjuice_copy.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\c5892319-4c06-4a2d-8b48-09afa6b930b1_dpr-kjuice_copy.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\c5892319-4c06-4a2d-8b48-09afa6b930b1",
+      "status": "processed",
+      "created_at": "2026-09-07T03:51:29.108424+00:00"
+    },
+    "53324a7b-a7b4-4ce1-921b-dccd132dd0c8": {
+      "document_id": "53324a7b-a7b4-4ce1-921b-dccd132dd0c8",
+      "filename": "dpr-kjuice_copy.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\53324a7b-a7b4-4ce1-921b-dccd132dd0c8_dpr-kjuice_copy.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\53324a7b-a7b4-4ce1-921b-dccd132dd0c8",
+      "status": "processed",
+      "created_at": "2026-09-07T03:59:04.673586+00:00"
+    },
+    "ca5c0106-2a55-4b5b-8479-9951b9adc4dc": {
+      "document_id": "ca5c0106-2a55-4b5b-8479-9951b9adc4dc",
+      "filename": "dpr-kjuice_copy.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\ca5c0106-2a55-4b5b-8479-9951b9adc4dc_dpr-kjuice_copy.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\ca5c0106-2a55-4b5b-8479-9951b9adc4dc",
+      "status": "processed",
+      "created_at": "2026-09-07T04:36:55.751324+00:00"
+    },
+    "a9b31755-3114-43ca-9554-ce815a2ab057": {
+      "document_id": "a9b31755-3114-43ca-9554-ce815a2ab057",
+      "filename": "BridgesDPRTemplate.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\a9b31755-3114-43ca-9554-ce815a2ab057_BridgesDPRTemplate.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\a9b31755-3114-43ca-9554-ce815a2ab057",
+      "status": "processed",
+      "created_at": "2026-09-07T05:24:15.573560+00:00"
     }
   }
 }

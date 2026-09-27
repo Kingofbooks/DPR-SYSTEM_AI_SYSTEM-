@@ -1,0 +1,289 @@
+{
+  "sections": [
+    {
+      "section": "EXECUTIVE SUMMARY:",
+      "category": "Technical",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": "h GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil an",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "evidence": "entation using existing information and specifications from various standards \n \nThe location shall generally be governed by the app",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Implementation details"
+    },
+    {
+      "section": "3. Project Details",
+      "category": "Technical",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": "h GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil an",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "evidence": "entation using existing information and specifications from various standards \n \nThe location shall generally be governed by the app",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Implementation details"
+    },
+    {
+      "section": "REQUIREMENT/ DEMAND ANALYSIS",
+      "category": "Technical",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": "h GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil an",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "evidence": "entation using existing information and specifications from various standards \n \nThe location shall generally be governed by the app",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Implementation details"
+    },
+    {
+      "section": "Topographic Survey/leveling survey with GPS stations and coordinates",
+      "category": "Technical",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": "h GPS stations and coordinates, a brief methodology of \nleveling survey, accuracy adopted, nearest bench mark etc.  \n3.Soil an",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "evidence": "entation using existing information and specifications from various standards \n \nThe location shall generally be governed by the app",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Implementation details"
+    },
+    {
+      "section": "CHAPTERS:",
+      "category": "Financial",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Cost estimate",
+          "evidence": "which results in \nminimum construction cost with respect to the actual site conditions like width of river, \nhydraulic para",
+          "weight": 2
+        },
+        {
+          "item": "Funding source",
+          "evidence": "ion should focus on the cost estimates, budget for the project, means of \nfinancing and phasing of expenditure. \n \nCost estim",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Breakup",
+          "reason": "No evidence found for Breakup",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Breakup"
+    },
+    {
+      "section": "ENGINEERING SURVEYS AND INVESTIGATIONS",
+      "category": "Financial",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Cost estimate",
+          "evidence": "which results in \nminimum construction cost with respect to the actual site conditions like width of river, \nhydraulic para",
+          "weight": 2
+        },
+        {
+          "item": "Funding source",
+          "evidence": "ion should focus on the cost estimates, budget for the project, means of \nfinancing and phasing of expenditure. \n \nCost estim",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Breakup",
+          "reason": "No evidence found for Breakup",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Breakup"
+    },
+    {
+      "section": "2. Project background",
+      "category": "Financial",
+      "score": 50.0,
+      "present": [
+        {
+          "item": "Cost estimate",
+          "evidence": "investigation charges including any O&M cost for a \nspecific period shall be clearly specified. \n \nLump sum provisions for",
+          "weight": 2
+        }
+      ],
+      "missing": [
+        {
+          "item": "Funding source",
+          "reason": "No evidence found for Funding source",
+          "weight": 1
+        },
+        {
+          "item": "Breakup",
+          "reason": "No evidence found for Breakup",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing items: Funding source, Breakup"
+    },
+    {
+      "section": "4. Objective and scope of the work",
+      "category": "Environmental",
+      "score": 50.0,
+      "present": [
+        {
+          "item": "Environmental impact",
+          "evidence": "sumptions \nhave to be presented. \n3.10. ENVIRONMENTAL & SUSTAINABILITY ASPECTS \n \nAn Environmental Management Plan (EMP) is to be de",
+          "weight": 2
+        }
+      ],
+      "missing": [
+        {
+          "item": "Mitigation measures",
+          "reason": "No evidence found for Mitigation measures",
+          "weight": 2
+        }
+      ],
+      "reason": "Missing items: Mitigation measures"
+    },
+    {
+      "section": "SALIENT FEATURES",
+      "category": "Risk",
+      "score": 100.0,
+      "present": [
+        {
+          "item": "Risk identification",
+          "evidence": "ero pollution etc. is desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large c",
+          "weight": 2
+        },
+        {
+          "item": "Mitigation plan",
+          "evidence": "s desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large capital outlay and various",
+          "weight": 2
+        }
+      ],
+      "missing": [],
+      "reason": "All expected items present."
+    },
+    {
+      "section": "INTRODUCTION",
+      "category": "Risk",
+      "score": 100.0,
+      "present": [
+        {
+          "item": "Risk identification",
+          "evidence": "ero pollution etc. is desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large c",
+          "weight": 2
+        },
+        {
+          "item": "Mitigation plan",
+          "evidence": "s desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large capital outlay and various",
+          "weight": 2
+        }
+      ],
+      "missing": [],
+      "reason": "All expected items present."
+    },
+    {
+      "section": "1. Project Definition, Concept and Scope",
+      "category": "Risk",
+      "score": 100.0,
+      "present": [
+        {
+          "item": "Risk identification",
+          "evidence": "desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large c",
+          "weight": 2
+        },
+        {
+          "item": "Mitigation plan",
+          "evidence": "desirable. \n3.11. RISK ASSESSMENT AND MITIGATION MEASURES \n \nFor those projects which involve large capital outlay and various",
+          "weight": 2
+        }
+      ],
+      "missing": [],
+      "reason": "All expected items present."
+    },
+    {
+      "section": "Whether land accusation involved?",
+      "category": "Appendix",
+      "score": 0.0,
+      "present": [],
+      "missing": [],
+      "reason": "No expected items for this section."
+    }
+  ],
+  "summary": {
+    "overall_score": 70.83,
+    "average_score": 70.83,
+    "weakest_sections": [
+      "Whether land accusation involved?",
+      "2. Project background",
+      "4. Objective and scope of the work"
+    ],
+    "present_sections": [
+      "EXECUTIVE SUMMARY:",
+      "3. Project Details",
+      "REQUIREMENT/ DEMAND ANALYSIS",
+      "Topographic Survey/leveling survey with GPS stations and coordinates",
+      "CHAPTERS:",
+      "ENGINEERING SURVEYS AND INVESTIGATIONS",
+      "2. Project background",
+      "4. Objective and scope of the work",
+      "SALIENT FEATURES",
+      "INTRODUCTION",
+      "1. Project Definition, Concept and Scope"
+    ],
+    "missing_sections": [
+      "Whether land accusation involved?"
+    ]
+  }
+}

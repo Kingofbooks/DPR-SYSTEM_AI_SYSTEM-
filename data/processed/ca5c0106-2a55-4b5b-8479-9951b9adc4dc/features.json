@@ -1,0 +1,23 @@
+{
+  "document": "completeness",
+  "feature_count": 17,
+  "features": {
+    "completeness_score": 0.0,
+    "critical_completeness": 0.0,
+    "weighted_completeness": 0.0,
+    "found_section_ratio": 0.0,
+    "missing_section_ratio": 0.0,
+    "critical_missing_ratio": 0.0,
+    "document_quality_score": 0.55,
+    "average_section_quality": 0.55,
+    "weak_section_ratio": 0.0,
+    "excellent_section_ratio": 0.333333,
+    "min_section_quality": 0.55,
+    "max_section_quality": 0.85,
+    "section_quality_range": 0.3,
+    "section_quality_std_proxy": 0.131233,
+    "overall_document_health": 0.275,
+    "completeness_quality_gap": 0.55,
+    "document_weakness_score": 0.725
+  }
+}

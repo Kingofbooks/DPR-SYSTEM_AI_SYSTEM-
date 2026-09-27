@@ -1,0 +1,61 @@
+{
+  "sections": [
+    {
+      "section": "Machinery Sappliers",
+      "category": "Technical",
+      "score": 25.0,
+      "present": [
+        {
+          "item": "Implementation details",
+          "evidence": "ry suppliers available within India for processing machineries and \nequipment. Some of the suppliers are: \n \n• \nStellar Food Te",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Technical approach",
+          "reason": "No evidence found for Technical approach",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        }
+      ],
+      "reason": "Missing some expected items."
+    },
+    {
+      "section": "Limitations Of Model DPR",
+      "category": "Other",
+      "score": 0.0,
+      "present": [],
+      "missing": [],
+      "reason": "No expected items were defined for this section."
+    },
+    {
+      "section": "Guidelines For Enteprenures",
+      "category": "Other",
+      "score": 0.0,
+      "present": [],
+      "missing": [],
+      "reason": "No expected items were defined for this section."
+    }
+  ],
+  "summary": {
+    "overall_score": 8.33,
+    "average_score": 8.33,
+    "weakest_sections": [
+      "Limitations Of Model DPR",
+      "Guidelines For Enteprenures",
+      "Machinery Sappliers"
+    ],
+    "present_sections": [
+      "Machinery Sappliers"
+    ],
+    "missing_sections": [
+      "Limitations Of Model DPR",
+      "Guidelines For Enteprenures"
+    ]
+  }
+}
