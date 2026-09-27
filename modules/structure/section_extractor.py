@@ -1,3 +1,4 @@
+import json
 import re
 from pathlib import Path
 
@@ -15,8 +16,7 @@ class SectionExtractor:
         """
         Normalize text only for comparison.
 
-        IMPORTANT:
-        This normalized text is NEVER used for slicing
+        The normalized text is NEVER used to slice
         the original document.
         """
 
@@ -25,25 +25,282 @@ class SectionExtractor:
 
         text = text.lower()
 
-        # Normalize whitespace
         text = re.sub(
             r"\s+",
             " ",
             text
         )
 
-        # Normalize common OCR punctuation
-        text = text.replace(
-            "–",
-            "-"
-        )
-
-        text = text.replace(
-            "—",
-            "-"
-        )
+        text = text.replace("–", "-")
+        text = text.replace("—", "-")
 
         return text.strip()
+
+    # =========================================================
+    # GET NUMERIC SECTION NUMBER
+    # =========================================================
+
+    def get_section_number(
+        self,
+        section_id: str
+    ):
+        """
+        Convert:
+
+            E.7  -> 7
+            E.10 -> 10
+            E.13 -> 13
+
+        Returns None when unavailable.
+        """
+
+        if not section_id:
+            return None
+
+        match = re.search(
+            r"[A-Za-z]+\.(\d+)",
+            section_id
+        )
+
+        if not match:
+            return None
+
+        return int(match.group(1))
+
+    # =========================================================
+    # FIND NUMBERED DOCUMENT HEADING
+    # =========================================================
+
+    def find_numbered_heading_position(
+        self,
+        text: str,
+        section_id: str
+    ):
+        """
+        Find the actual numbered heading used inside
+        the DPR.
+
+        Examples:
+
+            E.7  -> 7 CROSS SECTIONAL ELEMENTS
+            E.10 -> 10 PAVEMENT DESIGN
+
+        We deliberately look for uppercase heading-like
+        text so that table rows such as:
+
+            10 Right Of Way
+
+        are not treated as document headings.
+        """
+
+        if not text or not section_id:
+            return None
+
+        section_number = self.get_section_number(
+            section_id
+        )
+
+        if section_number is None:
+            return None
+
+        current_position = 0
+
+        for line in text.splitlines(
+            keepends=True
+        ):
+
+            original_line = line
+
+            stripped = original_line.strip()
+
+            if not stripped:
+                current_position += len(
+                    original_line
+                )
+                continue
+
+            # -------------------------------------------------
+            # Example:
+            #
+            # 7 CROSS SECTIONAL ELEMENTS
+            # 10 PAVEMENT DESIGN
+            # 11. JUNCTION IMPROVEMENT
+            # -------------------------------------------------
+
+            match = re.match(
+                r"^(\d{1,3})\s*[\.)]?\s+(.+)$",
+                stripped
+            )
+
+            if match:
+
+                number = int(
+                    match.group(1)
+                )
+
+                heading_text = (
+                    match.group(2).strip()
+                )
+
+                # Only accept the expected section number
+                if number == section_number:
+
+                    # Heading should look reasonably like
+                    # a document heading.
+                    letters = re.sub(
+                        r"[^A-Za-z]+",
+                        "",
+                        heading_text
+                    )
+
+                    uppercase_letters = sum(
+                        1
+                        for char in letters
+                        if char.isupper()
+                    )
+
+                    if (
+                        len(letters) >= 4
+                        and uppercase_letters
+                        / max(len(letters), 1)
+                        >= 0.70
+                    ):
+                        return current_position
+
+            current_position += len(
+                original_line
+            )
+
+        return None
+
+    # =========================================================
+    # FIND NEXT NUMBERED DOCUMENT HEADING
+    # =========================================================
+
+    def find_next_numbered_heading(
+        self,
+        page_text: dict,
+        start_page: int,
+        end_page: int,
+        current_section_id: str
+    ):
+        """
+        Find the next obvious numbered document heading.
+
+        Example:
+
+            E.10 starts at:
+
+                10 PAVEMENT DESIGN
+
+            We detect:
+
+                11. JUNCTION IMPROVEMENT
+
+            and return its page + character position.
+
+        end_page is EXCLUSIVE.
+        """
+
+        current_number = self.get_section_number(
+            current_section_id
+        )
+
+        if current_number is None:
+            return None
+
+        for page_number in range(
+            start_page,
+            end_page
+        ):
+
+            text = page_text.get(
+                page_number,
+                ""
+            )
+
+            if not text:
+                continue
+
+            current_position = 0
+
+            for line in text.splitlines(
+                keepends=True
+            ):
+
+                original_line = line
+                stripped = original_line.strip()
+
+                if not stripped:
+                    current_position += len(
+                        original_line
+                    )
+                    continue
+
+                match = re.match(
+                    r"^(\d{1,3})\s*[\.)]?\s+(.+)$",
+                    stripped
+                )
+
+                if match:
+
+                    number = int(
+                        match.group(1)
+                    )
+
+                    heading_text = (
+                        match.group(2).strip()
+                    )
+
+                    # Must be a later numbered section.
+                    if number > current_number:
+
+                        letters = re.sub(
+                            r"[^A-Za-z]+",
+                            "",
+                            heading_text
+                        )
+
+                        if letters:
+
+                            uppercase_letters = sum(
+                                1
+                                for char in letters
+                                if char.isupper()
+                            )
+
+                            uppercase_ratio = (
+                                uppercase_letters
+                                / max(
+                                    len(letters),
+                                    1
+                                )
+                            )
+
+                            # Uppercase heading heuristic.
+                            #
+                            # This avoids treating:
+                            #
+                            # 10 Right Of Way
+                            #
+                            # as a major section heading.
+                            if (
+                                len(letters) >= 4
+                                and uppercase_ratio >= 0.70
+                            ):
+
+                                return {
+                                    "page": page_number,
+                                    "position": current_position,
+                                    "number": number,
+                                    "text": heading_text
+                                }
+
+                current_position += len(
+                    original_line
+                )
+
+        return None
 
     # =========================================================
     # FIND HEADING POSITION
@@ -58,11 +315,11 @@ class SectionExtractor:
         """
         Find a section heading inside ORIGINAL text.
 
-        Returns a character position belonging to the
-        original string.
+        Search order:
 
-        We NEVER use a position calculated from a
-        normalized copy to slice the original text.
+        1. Exact section ID
+        2. Title
+        3. Actual numbered document heading
         """
 
         if not text:
@@ -75,10 +332,6 @@ class SectionExtractor:
         normalized_title = self.normalize_text(
             title
         )
-
-        # -----------------------------------------------------
-        # Build original-line positions
-        # -----------------------------------------------------
 
         current_position = 0
 
@@ -117,7 +370,6 @@ class SectionExtractor:
                 )
 
                 if compact_id in compact_line:
-
                     return current_position
 
             # =================================================
@@ -129,17 +381,30 @@ class SectionExtractor:
                 and normalized_title
                 in normalized_line
             ):
-
                 return current_position
 
             current_position += len(
                 original_line
             )
 
+        # =====================================================
+        # 3. NUMBERED DOCUMENT HEADING
+        # =====================================================
+
+        numbered_position = (
+            self.find_numbered_heading_position(
+                text,
+                section_id
+            )
+        )
+
+        if numbered_position is not None:
+            return numbered_position
+
         return None
 
     # =========================================================
-    # FIND ALL HEADING POSITIONS ON A PAGE
+    # FIND ALL HEADING POSITIONS
     # =========================================================
 
     def find_all_heading_positions(
@@ -149,12 +414,7 @@ class SectionExtractor:
         title: str
     ):
         """
-        Find possible heading positions.
-
-        Useful when OCR text contains repeated references
-        to the section ID/title.
-
-        Returns a list of original-text positions.
+        Find possible positions of the section heading.
         """
 
         positions = []
@@ -188,10 +448,6 @@ class SectionExtractor:
 
                 matched = False
 
-                # ---------------------------------------------
-                # Section ID
-                # ---------------------------------------------
-
                 if normalized_id:
 
                     compact_line = (
@@ -207,10 +463,6 @@ class SectionExtractor:
                     if compact_id in compact_line:
                         matched = True
 
-                # ---------------------------------------------
-                # Title
-                # ---------------------------------------------
-
                 if (
                     not matched
                     and normalized_title
@@ -220,13 +472,28 @@ class SectionExtractor:
                     matched = True
 
                 if matched:
-
                     positions.append(
                         current_position
                     )
 
             current_position += len(
                 original_line
+            )
+
+        # Add numbered heading if it wasn't already found.
+        numbered_position = (
+            self.find_numbered_heading_position(
+                text,
+                section_id
+            )
+        )
+
+        if (
+            numbered_position is not None
+            and numbered_position not in positions
+        ):
+            positions.append(
+                numbered_position
             )
 
         return positions
@@ -238,19 +505,17 @@ class SectionExtractor:
     def clean_section_content(
         self,
         content: str
-    ) -> str:
+    ):
 
         if not content:
             return ""
 
-        # Remove excessive blank lines
         content = re.sub(
             r"\n{3,}",
             "\n\n",
             content
         )
 
-        # Remove excessive spaces
         content = re.sub(
             r"[ \t]{2,}",
             " ",
@@ -260,35 +525,22 @@ class SectionExtractor:
         return content.strip()
 
     # =========================================================
-    # DOCUMENT BOUNDARY DETECTION
+    # MAJOR DOCUMENT HEADING
     # =========================================================
 
     def is_major_document_heading(
         self,
         text: str
-    ) -> bool:
-        """
-        Determine whether the beginning of a page looks
-        like a major document/chapter boundary.
-
-        This is deliberately conservative.
-        """
+    ):
 
         if not text:
             return False
 
-        # Only inspect the beginning of the page.
         first_part = text[:1000]
 
         normalized = self.normalize_text(
             first_part
         )
-
-        # -----------------------------------------------------
-        # CHAPTER 1
-        # CHAPTER-I
-        # CHAPTER III
-        # -----------------------------------------------------
 
         chapter_patterns = [
 
@@ -305,7 +557,6 @@ class SectionExtractor:
                 normalized,
                 re.IGNORECASE
             ):
-
                 return True
 
         return False
@@ -319,22 +570,6 @@ class SectionExtractor:
         page_text: dict,
         start_page: int
     ):
-        """
-        Find the first major document boundary after
-        start_page.
-
-        Returns the PDF page number where the next major
-        document section begins.
-
-        Example:
-
-            E.21 starts page 18
-            CHAPTER 1 starts page 19
-
-        returns:
-
-            18  (zero-indexed page 19)
-        """
 
         for page_number in sorted(
             page_text.keys()
@@ -354,7 +589,6 @@ class SectionExtractor:
             if self.is_major_document_heading(
                 text
             ):
-
                 return page_number
 
         return None
@@ -370,18 +604,22 @@ class SectionExtractor:
         next_section
     ):
         """
-        Determine where the current section ends.
+        Determine the EXCLUSIVE page boundary.
 
-        Returns the EXCLUSIVE end page.
+        Normally we use the next mapped section.
 
-        Example:
+        If the next mapped section is several pages away,
+        we additionally look for an obvious numbered heading
+        inside the range.
 
-            current = page 17
-            next = page 20
+        This fixes cases such as:
 
-            return 20
-
-            => pages 17,18,19
+            E.10
+            10 PAVEMENT DESIGN
+            ...
+            11. JUNCTION IMPROVEMENT
+            ...
+            E.13
         """
 
         start_page = current_section[
@@ -389,25 +627,21 @@ class SectionExtractor:
         ]
 
         # -----------------------------------------------------
-        # CASE 1:
-        # There is a next mapped section.
+        # Next mapped section
         # -----------------------------------------------------
 
         if next_section is not None:
 
-            next_page = next_section[
+            next_page = next_section.get(
                 "pdf_page"
-            ]
+            )
 
             if next_page is not None:
 
                 return next_page
 
         # -----------------------------------------------------
-        # CASE 2:
-        # Last mapped section.
-        #
-        # DO NOT automatically use len(page_text).
+        # Last mapped section
         # -----------------------------------------------------
 
         boundary_page = (
@@ -418,16 +652,7 @@ class SectionExtractor:
         )
 
         if boundary_page is not None:
-
             return boundary_page
-
-        # -----------------------------------------------------
-        # CASE 3:
-        # No structural boundary found.
-        #
-        # Conservative fallback:
-        # use the end of the PDF.
-        # -----------------------------------------------------
 
         return len(page_text)
 
@@ -442,8 +667,8 @@ class SectionExtractor:
         next_section
     ):
         """
-        Extract a section when current and next section
-        start on the same PDF page.
+        Extract current section when the next mapped section
+        starts on the same page.
         """
 
         current_start = (
@@ -474,10 +699,6 @@ class SectionExtractor:
             )
         )
 
-        # -----------------------------------------------------
-        # Ideal case
-        # -----------------------------------------------------
-
         if (
             current_start is not None
             and next_start is not None
@@ -485,24 +706,14 @@ class SectionExtractor:
         ):
 
             return page_content[
-                current_start:
-                next_start
+                current_start:next_start
             ]
-
-        # -----------------------------------------------------
-        # If current heading found but next heading isn't,
-        # take from current heading to page end.
-        # -----------------------------------------------------
 
         if current_start is not None:
 
             return page_content[
                 current_start:
             ]
-
-        # -----------------------------------------------------
-        # Last fallback
-        # -----------------------------------------------------
 
         return page_content
 
@@ -518,12 +729,74 @@ class SectionExtractor:
         current_section
     ):
         """
-        Extract a section spanning multiple pages.
+        Extract section content across multiple pages.
 
-        end_page is EXCLUSIVE.
+        Also detects an obvious numbered section heading
+        inside the range and stops there.
         """
 
         content_parts = []
+
+        section_id = current_section.get(
+            "section_id",
+            ""
+        )
+
+        title = current_section.get(
+            "title",
+            ""
+        )
+
+        # -----------------------------------------------------
+        # Find an internal numbered heading.
+        #
+        # Example:
+        #
+        # E.10 starts page 12
+        #
+        # 10 PAVEMENT DESIGN
+        #
+        # ...
+        #
+        # 11. JUNCTION IMPROVEMENT
+        #
+        # Stop at 11.
+        # -----------------------------------------------------
+
+        next_document_heading = (
+            self.find_next_numbered_heading(
+                page_text,
+                start_page,
+                end_page,
+                section_id
+            )
+        )
+
+        boundary_page = None
+        boundary_position = None
+
+        if next_document_heading is not None:
+
+            boundary_page = (
+                next_document_heading["page"]
+            )
+
+            boundary_position = (
+                next_document_heading["position"]
+            )
+
+            print(
+                f"BOUNDARY | "
+                f"{section_id} -> "
+                f"Section "
+                f"{next_document_heading['number']} "
+                f"on PDF Page "
+                f"{boundary_page + 1}"
+            )
+
+        # -----------------------------------------------------
+        # Process pages
+        # -----------------------------------------------------
 
         for page_number in range(
             start_page,
@@ -539,8 +812,7 @@ class SectionExtractor:
                 continue
 
             # -------------------------------------------------
-            # First page:
-            # remove material before heading.
+            # First page
             # -------------------------------------------------
 
             if page_number == start_page:
@@ -548,14 +820,8 @@ class SectionExtractor:
                 start_position = (
                     self.find_heading_position(
                         page_content,
-                        current_section.get(
-                            "section_id",
-                            ""
-                        ),
-                        current_section.get(
-                            "title",
-                            ""
-                        )
+                        section_id,
+                        title
                     )
                 )
 
@@ -566,6 +832,25 @@ class SectionExtractor:
                             start_position:
                         ]
                     )
+
+            # -------------------------------------------------
+            # Internal numbered boundary
+            # -------------------------------------------------
+
+            if (
+                boundary_page is not None
+                and page_number == boundary_page
+            ):
+
+                page_content = page_content[
+                    :boundary_position
+                ]
+
+                content_parts.append(
+                    page_content
+                )
+
+                break
 
             content_parts.append(
                 page_content
@@ -584,16 +869,6 @@ class SectionExtractor:
         pdf_data: dict,
         mapped_sections: list
     ) -> list:
-        """
-        Extract content for every mapped section.
-
-        Handles:
-
-        - same-page sections
-        - multi-page sections
-        - final-section boundaries
-        - original-text heading positions
-        """
 
         page_text = pdf_data.get(
             "page_text",
@@ -608,34 +883,21 @@ class SectionExtractor:
 
             return []
 
-        # -----------------------------------------------------
-        # Keep only successfully mapped sections
-        # -----------------------------------------------------
-
         valid_sections = [
 
             section
+
             for section in mapped_sections
 
-            if (
-                section.get(
-                    "pdf_page"
-                )
-                is not None
-            )
+            if section.get(
+                "pdf_page"
+            ) is not None
 
         ]
 
         # -----------------------------------------------------
-        # Preserve TOC order.
-        #
-        # The mapper already gives us the correct order.
+        # Preserve mapper order.
         # -----------------------------------------------------
-
-        valid_sections.sort(
-            key=lambda section:
-                section["pdf_page"]
-        )
 
         extracted_sections = []
 
@@ -644,7 +906,7 @@ class SectionExtractor:
         )
 
         # =====================================================
-        # PROCESS EACH SECTION
+        # PROCESS SECTIONS
         # =====================================================
 
         for index, section in enumerate(
@@ -666,7 +928,7 @@ class SectionExtractor:
             )
 
             # -------------------------------------------------
-            # Determine next section
+            # Next mapped section
             # -------------------------------------------------
 
             next_section = None
@@ -683,7 +945,7 @@ class SectionExtractor:
                 )
 
             # -------------------------------------------------
-            # Determine end boundary
+            # Determine mapped page boundary
             # -------------------------------------------------
 
             next_page = (
@@ -724,7 +986,7 @@ class SectionExtractor:
                 end_page = start_page
 
             # =================================================
-            # MULTI-PAGE
+            # MULTI PAGE
             # =================================================
 
             else:
@@ -738,10 +1000,6 @@ class SectionExtractor:
                     )
                 )
 
-                # -------------------------------------------------
-                # next_page is EXCLUSIVE
-                # -------------------------------------------------
-
                 if next_page > start_page:
 
                     end_page = (
@@ -753,7 +1011,7 @@ class SectionExtractor:
                     end_page = start_page
 
             # -------------------------------------------------
-            # Clean
+            # Clean content
             # -------------------------------------------------
 
             content = (
@@ -763,7 +1021,7 @@ class SectionExtractor:
             )
 
             # -------------------------------------------------
-            # Build output
+            # Output
             # -------------------------------------------------
 
             extracted_section = {
@@ -799,8 +1057,7 @@ class SectionExtractor:
                 f"{section_id} | "
                 f"{title} | "
                 f"Pages "
-                f"{start_page + 1}"
-                f"-"
+                f"{start_page + 1}-"
                 f"{end_page + 1} | "
                 f"Characters: "
                 f"{len(content)}"
@@ -831,6 +1088,9 @@ if __name__ == "__main__":
         SectionMapper
     )
 
+    # ---------------------------------------------------------
+    # BASE DIRECTORY
+    # ---------------------------------------------------------
 
     BASE_DIR = (
         Path(__file__)
@@ -845,10 +1105,9 @@ if __name__ == "__main__":
         / "DPR of Road.pdf"
     )
 
-
-    # ---------------------------------------------------------
+    # =========================================================
     # 1. PDF READER
-    # ---------------------------------------------------------
+    # =========================================================
 
     reader = PDFReader()
 
@@ -858,10 +1117,9 @@ if __name__ == "__main__":
         )
     )
 
-
-    # ---------------------------------------------------------
+    # =========================================================
     # 2. TOC DETECTION
-    # ---------------------------------------------------------
+    # =========================================================
 
     toc_detector = TOCDetector()
 
@@ -885,10 +1143,9 @@ if __name__ == "__main__":
         toc_result["toc_pages"]
     )
 
-
-    # ---------------------------------------------------------
+    # =========================================================
     # 3. TOC PARSING
-    # ---------------------------------------------------------
+    # =========================================================
 
     toc_parser = TOCParser()
 
@@ -909,10 +1166,9 @@ if __name__ == "__main__":
         )
     )
 
-
-    # ---------------------------------------------------------
+    # =========================================================
     # 4. SECTION MAPPING
-    # ---------------------------------------------------------
+    # =========================================================
 
     mapper = SectionMapper()
 
@@ -924,10 +1180,9 @@ if __name__ == "__main__":
         )
     )
 
-
-    # ---------------------------------------------------------
+    # =========================================================
     # 5. SECTION EXTRACTION
-    # ---------------------------------------------------------
+    # =========================================================
 
     extractor = SectionExtractor()
 
@@ -938,10 +1193,9 @@ if __name__ == "__main__":
         )
     )
 
-
-    # ---------------------------------------------------------
-    # 6. RESULTS
-    # ---------------------------------------------------------
+    # =========================================================
+    # 6. EXTRACTION SUMMARY
+    # =========================================================
 
     print(
         "\n"
@@ -979,9 +1233,10 @@ if __name__ == "__main__":
             f"Chars "
             f"{len(section['content'])}"
         )
-        # ---------------------------------------------------------
-    # 7. SAVE EXTRACTED DOCUMENT
-    # ---------------------------------------------------------
+
+    # =========================================================
+    # 7. SAVE PROCESSED DOCUMENT
+    # =========================================================
 
     output_path = (
         BASE_DIR
@@ -996,21 +1251,30 @@ if __name__ == "__main__":
     )
 
     document = {
-        "metadata": {
-            "filename": pdf_path.name,
-            "source": str(pdf_path),
-            "total_sections": len(extracted_sections),
-        },
-        "sections": extracted_sections,
-    }
 
-    import json
+        "metadata": {
+
+            "filename":
+                pdf_path.name,
+
+            "source":
+                str(pdf_path),
+
+            "total_sections":
+                len(extracted_sections)
+
+        },
+
+        "sections":
+            extracted_sections
+    }
 
     with open(
         output_path,
         "w",
         encoding="utf-8"
     ) as file:
+
         json.dump(
             document,
             file,
@@ -1018,8 +1282,19 @@ if __name__ == "__main__":
             ensure_ascii=False
         )
 
-    print()
-    print("=" * 70)
-    print("DOCUMENT SAVED")
-    print("=" * 70)
-    print(f"Output: {output_path}")
+    print(
+        "\n"
+        + "=" * 70
+    )
+
+    print(
+        "DOCUMENT SAVED"
+    )
+
+    print(
+        "=" * 70
+    )
+
+    print(
+        f"Output: {output_path}"
+    )

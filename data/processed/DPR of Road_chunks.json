@@ -1,5 +1,5 @@
 {
-    "total_chunks": 19,
+    "total_chunks": 15,
     "chunk_size": 1000,
     "chunk_overlap": 200,
     "chunks": [
@@ -12,8 +12,8 @@
             "start_page": 9,
             "end_page": 9,
             "section_confidence": 1.0,
-            "content": "6 LAND USE\n\nThe entire length of project alignment is passing through open countryside, semi\nbuilt-up and built-up areas.\n\n7 CROSS SECTIONAL ELEMENTS\n\nThe Indian Roads Congress has brought out several publications which address\nthe issue of geometric design for roads. A tabular presentation of selected main\nparameters associated with each of the design standards for this proposed 4lane\nNational Highway through plain terrain is given below.\n\nTable E2 : Design Standards for Cross Sectional Elements\n\n~~ ‘Ttem\n\n(For Normal Road Section _\n| 1 | Design Speed\n| e Ruling\n\n2 _| Width of Carriageway\nPaved Shoulder __\n_|_ Earthen Shoulder __\nFormation Width _\n\n; 5 Camber\n\n|e BT Surface\n___* _Earthern Surface __.\n___ Maximum Super elevation\n_ Minimum Vertical Curve Length\nGradient\na Ruling gradient (%)\n\n“pe Limiting gradient (%)",
-            "character_count": 828
+            "content": "6 LAND USE\n\nThe entire length of project alignment is passing through open countryside, semi\nbuilt-up and built-up areas.",
+            "character_count": 121
         },
         {
             "chunk_id": "DPR of Road.pdf__E.7__chunk_1",
@@ -24,8 +24,8 @@
             "start_page": 9,
             "end_page": 10,
             "section_confidence": 0.867,
-            "content": "5 ALIGNMENT OF PROPOSED ROAD\n\nThe proposed alignment is completely new proposal traverses through\nagricultural land from Dolabari (km 17.300 of NH-37A) to NH-52 (km 182.00)\nnear Jamugurihat. The total length of realignment portion is 18.810 kms. The\nproposed alignment crosses two major rivers Mora Bharali and Jia Bharali at\nCh.21710m and Ch.26100m respectively. The proposed length of individual\nbridges are 70m and 1200m respectively. Alignment traverses through mostly\nplain terrain. Geometry of the proposed alignment is smooth and designed for\n100 kmph.\n\n6 LAND USE\n\nThe entire length of project alignment is passing through open countryside, semi\nbuilt-up and built-up areas.\n\n7 CROSS SECTIONAL ELEMENTS",
-            "character_count": 710
+            "content": "7 CROSS SECTIONAL ELEMENTS\n\nThe Indian Roads Congress has brought out several publications which address\nthe issue of geometric design for roads. A tabular presentation of selected main\nparameters associated with each of the design standards for this proposed 4lane\nNational Highway through plain terrain is given below.\n\nTable E2 : Design Standards for Cross Sectional Elements\n\n~~ ‘Ttem\n\n(For Normal Road Section _\n| 1 | Design Speed\n| e Ruling\n\n2 _| Width of Carriageway\nPaved Shoulder __\n_|_ Earthen Shoulder __\nFormation Width _\n\n; 5 Camber\n\n|e BT Surface\n___* _Earthern Surface __.\n___ Maximum Super elevation\n_ Minimum Vertical Curve Length\nGradient\na Ruling gradient (%)\n\n“pe Limiting gradient (%)\n(97 Stopping Sight Distance _ OT\n__ «Ruling stopping sight distance (m)__| _\n| = Min. stopping sight distance (m)__|\n\n10 Right Of Way en a\n\nB | At Bridge Locations\nat | Carriageway _\n12 Raised Safety Kerb\n“43 Crash Barrier\n\n| Formation width _",
+            "character_count": 949
         },
         {
             "chunk_id": "DPR of Road.pdf__E.7__chunk_2",
@@ -33,18 +33,6 @@
             "section_id": "E.7",
             "section_title": "Cross Sectional Element -6",
             "chunk_index": 2,
-            "start_page": 9,
-            "end_page": 10,
-            "section_confidence": 0.867,
-            "content": "The Indian Roads Congress has brought out several publications which address\nthe issue of geometric design for roads. A tabular presentation of selected main\nparameters associated with each of the design standards for this proposed 4lane\nNational Highway through plain terrain is given below.\n\nTable E2 : Design Standards for Cross Sectional Elements\n\n~~ ‘Ttem\n\n(For Normal Road Section _\n| 1 | Design Speed\n| e Ruling\n\n2 _| Width of Carriageway\nPaved Shoulder __\n_|_ Earthen Shoulder __\nFormation Width _\n\n; 5 Camber\n\n|e BT Surface\n___* _Earthern Surface __.\n___ Maximum Super elevation\n_ Minimum Vertical Curve Length\nGradient\na Ruling gradient (%)\n\n“pe Limiting gradient (%)\n(97 Stopping Sight Distance _ OT\n__ «Ruling stopping sight distance (m)__| _\n| = Min. stopping sight distance (m)__|\n\n10 Right Of Way en a\n\nB | At Bridge Locations\nat | Carriageway _\n12 Raised Safety Kerb\n“43 Crash Barrier\n\n| Formation width _",
-            "character_count": 921
-        },
-        {
-            "chunk_id": "DPR of Road.pdf__E.7__chunk_3",
-            "document": "DPR of Road.pdf",
-            "section_id": "E.7",
-            "section_title": "Cross Sectional Element -6",
-            "chunk_index": 3,
             "start_page": 9,
             "end_page": 10,
             "section_confidence": 0.867,
@@ -60,8 +48,8 @@
             "start_page": 11,
             "end_page": 13,
             "section_confidence": 0.848,
-            "content": "C)\n9 VERTICAL ALIGNMENT\n\nThe terrain of the area along proposed alignment is fairly flat. Hence, gradient of\nthe proposed new two lane road is also flat. During the detailed investigations, it\nis observed that most of the stretches are above HFL. Depth of submergence and\nHFL data at every stretch is collected by local enquires and visual observations.\nAt these locations vertical profile is raised as per IRC guidelines.\n\nVertical geometry is designed as per IRC: SP: 23.\n\nA summary of proposed vertical alignment is given in the table below:\n\nTable E4 : Proposed Vertical Alignment\n\nSI no Gradient Length (m)\n1 >3.3 =\n2 3 HZ 1315.263\n3 2-1 7\n4 <1 11896.152\nSI no K value Length (m)\n1 <30 -\n2 30 - 40 800.00\n3 40-55 499.999\n4 55) — 72 -\n5 >72 2859.973\n10 PAVEMENT DESIGN\n\nFlexible pavement design has been done in accordance with the procedure\ndescribed in “IRC SP-37” issued by the Ministry of Road Transport and Highways\n(MORT&H), Government of India. The design parameters considered as follows:",
-            "character_count": 1000
+            "content": "10 PAVEMENT DESIGN\n\nFlexible pavement design has been done in accordance with the procedure\ndescribed in “IRC SP-37” issued by the Ministry of Road Transport and Highways\n(MORT&H), Government of India. The design parameters considered as follows:\n\n4-days soaked CBR = 6%\nInitial commercial traffic\n\nIn Up Direction = 1573\n\nES-7\n1\n\nIn Down Direction 1757\n\nTraffic growth rate _ 7.5%\nVehicle Damage Factor (VDF) 7 4.5\n\nLane Distribution Factor - 0.75\nDesign life _ 15 years\nCumulative ESAL - 75.50 MSA\n\nThe detailed Pavement Design along with calculations is given as follows.\n\nTable E5 ; Pavement Composition\n\nProject road | Design Recommended pavement composition in mm\nsection Traffic\nFor new construction\n(MSA)\nNew 2/4 lane road\nFor main 75.50 BC: 40 mm\ncarriageway DBM: 100mm\nWMM:250mm\nGSB:300mm\nFor service 10.0 BC: 40 mm\nroad DBM: 50mm\nWMM:250mm\nGSB:300mm",
+            "character_count": 860
         },
         {
             "chunk_id": "DPR of Road.pdf__E.10__chunk_2",
@@ -72,32 +60,8 @@
             "start_page": 11,
             "end_page": 13,
             "section_confidence": 0.848,
-            "content": "4-days soaked CBR = 6%\nInitial commercial traffic\n\nIn Up Direction = 1573\n\nES-7\n1\n\nIn Down Direction 1757\n\nTraffic growth rate _ 7.5%\nVehicle Damage Factor (VDF) 7 4.5\n\nLane Distribution Factor - 0.75\nDesign life _ 15 years\nCumulative ESAL - 75.50 MSA\n\nThe detailed Pavement Design along with calculations is given as follows.\n\nTable E5 ; Pavement Composition\n\nProject road | Design Recommended pavement composition in mm\nsection Traffic\nFor new construction\n(MSA)\nNew 2/4 lane road\nFor main 75.50 BC: 40 mm\ncarriageway DBM: 100mm\nWMM:250mm\nGSB:300mm\nFor service 10.0 BC: 40 mm\nroad DBM: 50mm\nWMM:250mm\nGSB:300mm\n\nGranular courses of pavement for service lane have been designed for design traffic\nof 10msa. However, the bituminous layers have been designed as stage\n\nconstruction.",
-            "character_count": 781
-        },
-        {
-            "chunk_id": "DPR of Road.pdf__E.10__chunk_3",
-            "document": "DPR of Road.pdf",
-            "section_id": "E.10",
-            "section_title": "Pavement Design -8",
-            "chunk_index": 3,
-            "start_page": 11,
-            "end_page": 13,
-            "section_confidence": 0.848,
-            "content": "11. JUNCTION IMPROVEMENT\nImprovements have been proposed for the junctions along the project road. The\njunctions are classified as follows-\n¢ Major junction with NH/SH/arterial road and other important road.\ne Minor junction with feeder roads.\n¢ The 4 major junctions are proposed for improvement in the project stretch.\nThe junctions along with summary of improvements are given in the table\nbelow.\nES-8\nTable E6 : Details of Improvement of Major Junctions\n\nsl Design Type of | LHS PAVEMENT Improvement\nno | chainage | junction COMPOSITION proposal\n(km)\nBC: 40mm\n1 17.865 4 legged DBM : 60mm Flyover at\nWMM ; 250mm aaa\nGSB : 250mm\nBC: 40mm\n2 23.840 3 legged DBM : 60mm At ; grade\nWMM ; 250mm gunetion\nGSB : 250mm\nJIA BHARALI RIVER\nBC: 40mm\n3 34.930 4 legged DBM : 60mm Flyover n at\nWMM : 250mm Jamugurihat\nGSB : 250mm\nz BC: 40mm vad\n4 35.700 3 legged DBM + Sener AL ; grade\nWMM : 250mm junction\nGSB : 250mm\n\n12 FLY OVERS\n\nTwo flyovers have been proposed at the junction of the proposed road with NH",
-            "character_count": 999
-        },
-        {
-            "chunk_id": "DPR of Road.pdf__E.10__chunk_4",
-            "document": "DPR of Road.pdf",
-            "section_id": "E.10",
-            "section_title": "Pavement Design -8",
-            "chunk_index": 4,
-            "start_page": 11,
-            "end_page": 13,
-            "section_confidence": 0.848,
-            "content": "37A and the other at the junction of the proposed stretch with NH 52 so that there is\n\nminimum obstruction for the free movement of traffic in all directions.\nTable E7 : Fly Overs\n\nSI No. Chainage(km) Type Span(m)\n1 17.865 4 lane 16\n2 34.930 4 lane 16\n\nES-9",
-            "character_count": 257
+            "content": "Granular courses of pavement for service lane have been designed for design traffic\nof 10msa. However, the bituminous layers have been designed as stage\n\nconstruction.",
+            "character_count": 167
         },
         {
             "chunk_id": "DPR of Road.pdf__E.13__chunk_1",
@@ -132,20 +96,8 @@
             "start_page": 14,
             "end_page": 14,
             "section_confidence": 1.0,
-            "content": "(B) GUIDE BUND OF THE PROPOSED BRIDGE\n* U/S guide bund is aligned at an angle of 10 degrees with the bridge axis towards\n\nright bank side to avoid deep channeling U/S left side guide bund is also aligned\n\nan angle of 33 degrees with the bridge axis towards left bank side to avoid deep\n\nchanneling\n\ne Guide bund at D/S of bridge beyond the points of avulsion of Jiabharali into\n\nMarabharali is found adequate to close the avulsion also at right bank\n¢ Guide bund at D/S on left bank\n\n14 SERVICE ROADS\n\nService roads are proposed in congested towns /villages to segregate the slow\nmoving local traffic from the high speed highway traffic .This will also cater to the\nneed of the local pedestrian& vehicles to travel without hindering the high speed\ntraffic along the highway.\n\nTable E8 : Details of proposed service road\n\nsi Design chainage | Width | LHS/RHS | Location Length\nno / Both (m)\n(m)\n\nFrom To",
-            "character_count": 902
-        },
-        {
-            "chunk_id": "DPR of Road.pdf__E.13(B)__chunk_2",
-            "document": "DPR of Road.pdf",
-            "section_id": "E.13(B)",
-            "section_title": "Guide Bund of the Proposed Bridge",
-            "chunk_index": 2,
-            "start_page": 14,
-            "end_page": 14,
-            "section_confidence": 1.0,
-            "content": "(km) (km)\n1 | 17.300 | 20.500 | 7.0 Both 7 6400.00\n2 | 22.800 | 23.800 | 7.0 Both _ 2000.00\n3 | 35.310 | 36.110 | 7.0 Both 1600.00\n\nES -10",
-            "character_count": 138
+            "content": "(B) GUIDE BUND OF THE PROPOSED BRIDGE\n* U/S guide bund is aligned at an angle of 10 degrees with the bridge axis towards\n\nright bank side to avoid deep channeling U/S left side guide bund is also aligned\n\nan angle of 33 degrees with the bridge axis towards left bank side to avoid deep\n\nchanneling\n\ne Guide bund at D/S of bridge beyond the points of avulsion of Jiabharali into\n\nMarabharali is found adequate to close the avulsion also at right bank\n¢ Guide bund at D/S on left bank\n\n14 SERVICE ROADS\n\nService roads are proposed in congested towns /villages to segregate the slow\nmoving local traffic from the high speed highway traffic .This will also cater to the\nneed of the local pedestrian& vehicles to travel without hindering the high speed\ntraffic along the highway.\n\nTable E8 : Details of proposed service road\n\nsi Design chainage | Width | LHS/RHS | Location Length\nno / Both (m)\n(m)\n\nFrom To\n\n(km) (km)\n1 | 17.300 | 20.500 | 7.0 Both 7 6400.00\n2",
+            "character_count": 956
         },
         {
             "chunk_id": "DPR of Road.pdf__E.16__chunk_1",

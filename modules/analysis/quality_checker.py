@@ -235,7 +235,7 @@ def assess_quality(data):
 
 def main():
     assessor = QualityAssessor()
-    pdf_path = APP_DIR / "data" / "raw" / "DPR_SAMPLE.pdf"
+    pdf_path = APP_DIR / "data" / "raw" / "DPR of Road.pdf"
     if not pdf_path.exists():
         pdf_path = APP_DIR / "data" / "raw" / "sample_dpr.pdf"
     print("Response from QualityAssessor:", assessor.final_json(pdf_path))
