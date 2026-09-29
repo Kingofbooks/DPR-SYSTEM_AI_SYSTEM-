@@ -1,0 +1,85 @@
+{
+    "metadata": {
+        "filename": "601cca03-8f8f-4b3b-aa5b-2c451bd29188_dpr-kjuice_copy.pdf",
+        "resolved_path": "F:\\DPR_AI-System\\data\\raw\\601cca03-8f8f-4b3b-aa5b-2c451bd29188_dpr-kjuice_copy.pdf",
+        "num_pages": 27
+    },
+    "toc": {
+        "found": true,
+        "pages": [
+            1,
+            2,
+            3,
+            4
+        ],
+        "confidence": 0.85
+    },
+    "parsed_sections": [
+        {
+            "section_id": "5.8",
+            "title": "Machinery Sappliers",
+            "page_reference": "24"
+        },
+        {
+            "section_id": "6.1",
+            "title": "Limitations Of Model DPR",
+            "page_reference": "25"
+        },
+        {
+            "section_id": "6.2",
+            "title": "Guidelines For Enteprenures",
+            "page_reference": "25"
+        }
+    ],
+    "mapped_sections": {
+        "sections": [
+            {
+                "section_id": "5.8",
+                "title": "Machinery Sappliers",
+                "page_reference": "24",
+                "pdf_page": 23,
+                "confidence": 1.0
+            },
+            {
+                "section_id": "6.1",
+                "title": "Limitations Of Model DPR",
+                "page_reference": "25",
+                "pdf_page": 24,
+                "confidence": 1.0
+            },
+            {
+                "section_id": "6.2",
+                "title": "Guidelines For Enteprenures",
+                "page_reference": "25",
+                "pdf_page": 24,
+                "confidence": 1.0
+            }
+        ]
+    },
+    "sections": [
+        {
+            "section_id": "5.8",
+            "title": "Machinery Sappliers",
+            "start_page": 23,
+            "end_page": 23,
+            "confidence": 1.0,
+            "content": "5.8 MACHINERY SAPPLIERS \nThere are many machinery suppliers available within India for processing machineries and \nequipment. Some of the suppliers are: \n \n• \nStellar Food Tech. Pune, Maharashtra, India \n• \nProveg Engineering & Food Processing Private Limited Near Swad Kolhapur Restaurant, \nChikhli, Pune \n• \nLithotech Food & Spice Machinery Vasai East, Mumbai \n• \nVarahi Industries GIDC Vatwa, Ahmedabad \n• \nSrinidhi Industries .Bommasandra, Bengaluru"
+        },
+        {
+            "section_id": "6.1",
+            "title": "Limitations Of Model DPR",
+            "start_page": 24,
+            "end_page": 24,
+            "confidence": 1.0,
+            "content": "LIMITATIONS OF MODEL DPR AND GUIDELINES FOR ENTREPRENEURS \n \n 6.1 LIMITATIONS OF MODEL DPR \ni. This DPR has provided only the basic standard components and methodology to be adopted by \nan entrepreneur while submitting a proposal under the Formalization of Micro Food Processing \nEnterprises Scheme of MoFPI. \n \nii. This DPR is made to provide general methodological structure not for specific \nentrepreneur/crops/location. Therefore, information on the entrepreneur, forms and structure \n(proprietorship/partnership/cooperative/ FPC/joint stock company) of business, background of \nproposed project, location, raw material base/contract sourcing, entrepreneur’s own SWOT \nanalysis, market research, rationale of the project for specific location, community \nadvantage/benefit, employment generation etc. are not given in detail. \n \niii. The present DPR is based on certain assumptions on cost, prices, interest, capacity utilization, \noutput recovery rate and so on. However, these assumptions in reality may vary across places, \nmarkets and situations; thus the resultant calculations will also change accordingly."
+        },
+        {
+            "section_id": "6.2",
+            "title": "Guidelines For Enteprenures",
+            "start_page": 24,
+            "end_page": 26,
+            "confidence": 1.0,
+            "content": "6.2 GUIDELINES FOR ENTEPRENURES \n \ni. The success of any prospective food processing project depends on how closer the assumptions \nmade in the initial stage are with the reality of the targeted market/place/situation. Therefore, the \nentrepreneurs must do its homework as realistic as possible on the assumed parameters. \n \nii. This model DPR must be made more comprehensive by the entrepreneur by including information \non the entrepreneur, forms and structure (proprietorship/partnership/cooperative/ FPC/joint stock \ncompany) of entrepreneur’s business, project location, raw material costing base/contract sourcing, \ndetailed market research, comprehensive dehydrated product mix based on demand, rationale of \nthe project for specific location, community advantage/benefit from the project, employment \ngeneration, production/availability of the raw materials/crops in the targeted area/clusters and many \nmore relevant aspects for acceptance and approval of the competent authority. \n \niii. The entrepreneur must be efficient in managing the strategic, financial, operational, material and \nmarketing aspects of a business. In spite of the assumed parameter being closely realistic, a project \nmay become unsustainable if the entrepreneur does not possess the required efficiency in managing \ndifferent aspects of the business and respond effectively in changing situations. \n \niv. The machineries should be purchased after thorough market research and satisfactory \ndemonstration. \n \nv. The entrepreneur must ensure uninterrupted quality raw materials’ supply and maintain optimum \ninventory levels for smooth operations management. \nvi. The entrepreneur must possess a strategic look to steer the business in upward trajectory.\nModel DPR On Kinnow Juice \nPage 26 \n \nvii. The entrepreneur must maintain optimum (not more or less) inventory, current assets. Selecting \noptimum source of finance, not too high debt-equity ratio, proper capital budgeting and judicious \nutilization of surplus profit for expansion is must. \n \nviii. The entrepreneur must explore prospective markets through extensive research, find innovative \nmarketing strategy, and maintain quality, adjust product mix to demand. \n \nix. The entrepreneur must provide required documents on land, financial transaction, balance sheet, \nfurther project analysis as required by the competent authority for approval. \n \nx. The entrepreneur must be hopeful and remain positive in attitude while all situations.\nContact Us \n \nNational Institute of Food Technology, \nEntrepreneurship and Management (NIFTEM) - Thanjavur \n(an Institute of National Importance under Ministry of Food Processing Industries, Government of India) \nPudukkottai Road, Thanjavur – 613005, Tamil Nadu,India \nPh: 04362-228155, Fax:04362-227971 \nEmail: director@iifpt.edu.in Web: https://niftem-t.ac.in/"
+        }
+    ]
+}

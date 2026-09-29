@@ -1,0 +1,288 @@
+{
+  "sections": [
+    {
+      "section": "Land Use",
+      "category": "Technical",
+      "quality_score": 50,
+      "clarity": 90,
+      "technical_depth": 10,
+      "consistency": 100,
+      "organization": 90,
+      "professionalism": 90,
+      "evidence": 20,
+      "strengths": [
+        "The statement is clear and easy to understand.",
+        "The information presented is consistent."
+      ],
+      "weaknesses": [
+        "Lacks specific data such as percentage breakdown of land types.",
+        "Does not provide any details on specific locations or implications for project execution or land acquisition."
+      ],
+      "issues": [
+        "Insufficient technical detail for a DPR section on land use."
+      ],
+      "reason": "This section is extremely superficial, offering only a general statement about the land types without any supporting data, percentages, or detailed analysis relevant for a Detailed Project Report."
+    },
+    {
+      "section": "Cross Sectional Element -6",
+      "category": "Technical",
+      "quality_score": 55,
+      "clarity": 60,
+      "technical_depth": 40,
+      "consistency": 50,
+      "organization": 70,
+      "professionalism": 60,
+      "evidence": 50,
+      "strengths": [
+        "Attempts to provide specific design parameters like design speed and curve characteristics.",
+        "References Indian Roads Congress (IRC) publications, indicating adherence to standards."
+      ],
+      "weaknesses": [
+        "Table E2 ('Design Standards for Cross Sectional Elements') is completely corrupted and unreadable, making it useless.",
+        "Table E3 ('Proposed Horizontal Alignment') appears incomplete or truncated, with the total length of curves not matching the textual description.",
+        "The line 'No. of Curves with radii (R):' is also corrupted, losing critical data."
+      ],
+      "issues": [
+        "Significant data corruption in key tables renders the section largely uninformative.",
+        "Inconsistency in curve length data between text and table."
+      ],
+      "reason": "The section suffers significantly from unreadable and corrupted data in critical tables (E2 and partially E3), which severely impacts its technical depth and consistency. While the narrative provides some context, the absence of key numerical information makes it largely ineffective."
+    },
+    {
+      "section": "Pavement Design -8",
+      "category": "Technical",
+      "quality_score": 90,
+      "clarity": 95,
+      "technical_depth": 85,
+      "consistency": 95,
+      "organization": 95,
+      "professionalism": 95,
+      "evidence": 90,
+      "strengths": [
+        "Clearly states the design methodology and refers to a relevant IRC standard (IRC SP-37).",
+        "Provides specific design parameters (e.g., CBR, VDF, ESAL, design life).",
+        "Presents a clear and detailed pavement composition for both main carriageway and service roads."
+      ],
+      "weaknesses": [
+        "While calculations are stated as 'given as follows,' they are not present in this excerpt."
+      ],
+      "issues": [],
+      "reason": "This section is well-structured, clear, and provides specific, relevant technical parameters and design outputs (pavement composition) in accordance with specified standards. It forms a solid basis for pavement design."
+    },
+    {
+      "section": "Structural Measures as suggested by the",
+      "category": "Technical",
+      "quality_score": 40,
+      "clarity": 90,
+      "technical_depth": 10,
+      "consistency": 100,
+      "organization": 90,
+      "professionalism": 90,
+      "evidence": 50,
+      "strengths": [
+        "Clearly introduces the topic and mentions the source of the suggestions (Brahmaputra Board)."
+      ],
+      "weaknesses": [
+        "The section is purely an introductory sentence and does not provide any actual details of the structural measures.",
+        "Extremely low technical depth."
+      ],
+      "issues": [
+        "Lack of content, as it's only a title and an introductory sentence without the actual 'structural measures'."
+      ],
+      "reason": "This section is merely an introductory sentence and provides no actual technical information regarding the structural measures suggested, making its technical depth extremely low. It serves more as a placeholder than a content section."
+    },
+    {
+      "section": "River Training",
+      "category": "Technical",
+      "quality_score": 50,
+      "clarity": 90,
+      "technical_depth": 20,
+      "consistency": 90,
+      "organization": 90,
+      "professionalism": 90,
+      "evidence": 20,
+      "strengths": [
+        "Clearly lists the two proposed river training measures."
+      ],
+      "weaknesses": [
+        "Provides no technical details (e.g., dimensions, materials, design rationale, hydraulic parameters, locations) for the listed measures.",
+        "Lacks justification for the selection of these specific measures."
+      ],
+      "issues": [
+        "Superficial technical detail, lacking actionable engineering information."
+      ],
+      "reason": "While clear, the section is superficial, listing types of measures without any technical details (e.g., dimensions, materials, design rationale, hydraulic parameters, locations) or justification for their selection, limiting its utility in a DPR."
+    },
+    {
+      "section": "Guide Bund of the Proposed Bridge",
+      "category": "Technical",
+      "quality_score": 35,
+      "clarity": 70,
+      "technical_depth": 50,
+      "consistency": 30,
+      "organization": 20,
+      "professionalism": 30,
+      "evidence": 40,
+      "strengths": [
+        "Provides specific alignment angles for guide bunds.",
+        "Explains the purpose of service roads."
+      ],
+      "weaknesses": [
+        "Suffers from extremely poor organization, abruptly shifting from guide bund details to service road details within the same section without any logical transition.",
+        "Table E8 ('Details of proposed service road') appears incomplete, showing only one entry.",
+        "Lacks justification for the specific angles chosen for the guide bunds."
+      ],
+      "issues": [
+        "Severe organizational and thematic inconsistency.",
+        "Incomplete data for service roads."
+      ],
+      "reason": "This section suffers from severe organizational issues, abruptly switching from guide bund details to service roads without any logical transition. Additionally, the service road table appears incomplete, and justification for design choices is missing, significantly reducing its quality."
+    },
+    {
+      "section": "Culverts and Bridges",
+      "category": "Technical",
+      "quality_score": 70,
+      "clarity": 90,
+      "technical_depth": 60,
+      "consistency": 95,
+      "organization": 90,
+      "professionalism": 90,
+      "evidence": 50,
+      "strengths": [
+        "Clearly states that design is based on drainage requirements.",
+        "Provides key technical details for two major bridges, including span, deck level, and foundation type."
+      ],
+      "weaknesses": [
+        "Mentions 'detailed study of the drainage requirements' but provides no details or references to this study.",
+        "Only details two bridges; if more exist, this section is incomplete."
+      ],
+      "issues": [
+        "Lack of supporting detail for claimed 'detailed study'."
+      ],
+      "reason": "This section provides critical details for major bridges but lacks elaboration on the 'detailed study of the drainage requirements' mentioned as the basis for design. The limited number of bridges detailed might also indicate incompleteness."
+    },
+    {
+      "section": "Traffic Signs, Markings and other Road Furniture",
+      "category": "Technical",
+      "quality_score": 90,
+      "clarity": 95,
+      "technical_depth": 80,
+      "consistency": 95,
+      "organization": 95,
+      "professionalism": 95,
+      "evidence": 85,
+      "strengths": [
+        "Clearly references IRC standards for design.",
+        "Provides a comprehensive list of proposed road furniture, including specific types and quantities for gantry signs."
+      ],
+      "weaknesses": [],
+      "issues": [],
+      "reason": "This section clearly lists the proposed traffic signs, markings, and other road furniture, referencing relevant IRC standards. It provides sufficient detail on the planned components in a professional and organized manner."
+    },
+    {
+      "section": "Land Acquisition",
+      "category": "Legal",
+      "quality_score": 45,
+      "clarity": 90,
+      "technical_depth": 30,
+      "consistency": 90,
+      "organization": 90,
+      "professionalism": 80,
+      "evidence": 20,
+      "strengths": [
+        "Clearly states the proposed Right of Way (ROW) width.",
+        "Mentions the types of land proposed for acquisition."
+      ],
+      "weaknesses": [
+        "Does not provide a detailed breakdown (e.g., area, percentage) of the land types to be acquired.",
+        "A critical component, the 'Land Acquisition and Utility Shifting estimate,' is explicitly stated as 'under process,' indicating significant incompleteness for a DPR."
+      ],
+      "issues": [
+        "Key financial and logistical estimates for land acquisition are pending, making the DPR incomplete in this regard."
+      ],
+      "reason": "While clear, the section lacks critical details such as a breakdown of land types by area/percentage. Most significantly, the Land Acquisition and Utility Shifting estimate is explicitly stated as 'under process,' indicating a major incompleteness for a Detailed Project Report."
+    },
+    {
+      "section": "Summary of EIA",
+      "category": "Environmental",
+      "quality_score": 30,
+      "clarity": 90,
+      "technical_depth": 10,
+      "consistency": 90,
+      "organization": 90,
+      "professionalism": 70,
+      "evidence": 10,
+      "strengths": [
+        "Clearly outlines the steps involved in conducting an EIA and references MOEF guidelines.",
+        "Acknowledges the need for a detailed EIA and mitigation measures."
+      ],
+      "weaknesses": [
+        "The title 'Summary of EIA' is misleading as the section only describes the *plan* to conduct an EIA, explicitly stating that it 'will have to be carried out' and has not yet been done.",
+        "Provides no actual summary of environmental impacts or mitigation findings."
+      ],
+      "issues": [
+        "The complete absence of a conducted EIA is a critical deficiency for a DPR.",
+        "The section title misrepresents its content."
+      ],
+      "reason": "The title 'Summary of EIA' is fundamentally misleading as the section explicitly states that the detailed Environmental Impact Assessment (EIA) has not yet been carried out, only describing the *process* for it. This represents a critical deficiency for a Detailed Project Report."
+    },
+    {
+      "section": "Economic Analysis",
+      "category": "Financial",
+      "quality_score": 20,
+      "clarity": 95,
+      "technical_depth": 0,
+      "consistency": 100,
+      "organization": 95,
+      "professionalism": 70,
+      "evidence": 0,
+      "strengths": [
+        "Clearly states that the economic analysis has not been carried out."
+      ],
+      "weaknesses": [
+        "Complete absence of economic analysis, which is a major component of a Detailed Project Report.",
+        "No financial or economic data is presented."
+      ],
+      "issues": [
+        "Critical omission of a mandatory DPR component (Economic Analysis)."
+      ],
+      "reason": "This section explicitly states that Economic Analysis has not been carried out, which is a major and critical omission for a Detailed Project Report and severely impacts its overall quality and completeness."
+    },
+    {
+      "section": "Consultancy",
+      "category": "Financial",
+      "quality_score": 45,
+      "clarity": 90,
+      "technical_depth": 30,
+      "consistency": 70,
+      "organization": 90,
+      "professionalism": 80,
+      "evidence": 20,
+      "strengths": [
+        "Clearly outlines the engagement of local consultants for specific specialized works.",
+        "Identifies future consultancy needs for critical detailed designs (flyovers, major bridge)."
+      ],
+      "weaknesses": [
+        "There is a minor inconsistency regarding the status of the EIA consultancy estimate (stated as 'will be submitted' in one section vs. 'has been included in the estimate' in this section).",
+        "Highlights that several critical detailed designs (flyovers, major bridge) are yet to be done, indicating incompleteness of the DPR."
+      ],
+      "issues": [
+        "Inconsistency regarding EIA estimate status.",
+        "DPR relies on future detailed designs by consultants, suggesting it's not fully 'detailed' yet."
+      ],
+      "reason": "While clearly outlining consultant engagement, there is a minor inconsistency regarding the status of the EIA consultancy estimate. More importantly, it highlights that critical detailed designs (flyovers, major bridge) are still pending, indicating that the DPR is incomplete and relies on future work."
+    }
+  ],
+  "summary": {
+    "overall_quality": 53,
+    "strongest_sections": [
+      "Pavement Design -8",
+      "Traffic Signs, Markings and other Road Furniture"
+    ],
+    "weakest_sections": [
+      "Economic Analysis",
+      "Summary of EIA",
+      "Guide Bund of the Proposed Bridge"
+    ]
+  }
+}

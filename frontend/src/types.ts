@@ -1,5 +1,21 @@
 export type DocumentStatus = 'uploaded' | 'processing' | 'processed' | 'failed'
 
+export interface AuthUser {
+  id: string
+  name: string
+  email: string
+}
+
+export interface LoginResponse {
+  access_token: string
+  token_type: string
+  user: AuthUser
+}
+
+export interface RegisterResponse extends AuthUser {
+  created_at: string
+}
+
 export interface DocumentRecord {
   document_id: string
   filename: string

@@ -1,0 +1,312 @@
+{
+  "sections": [
+    {
+      "section": "Land Use",
+      "category": "Technical",
+      "score": 0.0,
+      "present": [],
+      "missing": [
+        {
+          "item": "Technical approach",
+          "reason": "No evidence found for Technical approach",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Technical approach, Specifications, and Implementation details are missing."
+    },
+    {
+      "section": "Cross Sectional Element -6",
+      "category": "Technical",
+      "score": 75.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": "ns which address\nthe issue of geometric design for roads. A tabular presentation of selected main\nparameters associated with e",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "evidence": "ters associated with each of the design standards for this proposed 4lane\nNational Highway through plain terrain is given below.",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Implementation details are missing."
+    },
+    {
+      "section": "Pavement Design -8",
+      "category": "Technical",
+      "score": 50.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": "10 PAVEMENT DESIGN\n\nFlexible pavement design has been done in accordance with the procedure\ndescri",
+          "weight": 2
+        }
+      ],
+      "missing": [
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Specifications and Implementation details are missing."
+    },
+    {
+      "section": "Structural Measures as suggested by the",
+      "category": "Technical",
+      "score": 0.0,
+      "present": [],
+      "missing": [
+        {
+          "item": "Technical approach",
+          "reason": "No evidence found for Technical approach",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Technical approach, Specifications, and Implementation details are missing."
+    },
+    {
+      "section": "River Training",
+      "category": "Technical",
+      "score": 0.0,
+      "present": [],
+      "missing": [
+        {
+          "item": "Technical approach",
+          "reason": "No evidence found for Technical approach",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Technical approach, Specifications, and Implementation details are missing."
+    },
+    {
+      "section": "Guide Bund of the Proposed Bridge",
+      "category": "Technical",
+      "score": 50.0,
+      "present": [
+        {
+          "item": "Technical approach",
+          "evidence": ": Details of proposed service road\n\nsi Design chainage | Width | LHS/RHS | Location Length\nno / Both (m)\n(m)\n\nFrom To\n\n(km) (",
+          "weight": 2
+        }
+      ],
+      "missing": [
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Specifications and Implementation details are missing."
+    },
+    {
+      "section": "Culverts and Bridges",
+      "category": "Technical",
+      "score": 0.0,
+      "present": [],
+      "missing": [
+        {
+          "item": "Technical approach",
+          "reason": "No evidence found for Technical approach",
+          "weight": 2
+        },
+        {
+          "item": "Specifications",
+          "reason": "No evidence found for Specifications",
+          "weight": 1
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Technical approach, Specifications, and Implementation details are missing."
+    },
+    {
+      "section": "Traffic Signs, Markings and other Road Furniture",
+      "category": "Technical",
+      "score": 25.0,
+      "present": [
+        {
+          "item": "Specifications",
+          "evidence": "FURNITURE\n\nRoad markings and road signs standards are proposed based on IRC standards.\nThe road furniture proposed to be provided",
+          "weight": 1
+        }
+      ],
+      "missing": [
+        {
+          "item": "Technical approach",
+          "reason": "No evidence found for Technical approach",
+          "weight": 2
+        },
+        {
+          "item": "Implementation details",
+          "reason": "No evidence found for Implementation details",
+          "weight": 1
+        }
+      ],
+      "reason": "Technical approach and Implementation details are missing."
+    },
+    {
+      "section": "Land Acquisition",
+      "category": "Legal",
+      "score": 0.0,
+      "present": [],
+      "missing": [
+        {
+          "item": "Approvals",
+          "reason": "No evidence found for Approvals",
+          "weight": 2
+        },
+        {
+          "item": "Regulatory requirements",
+          "reason": "No evidence found for Regulatory requirements",
+          "weight": 2
+        }
+      ],
+      "reason": "Approvals and Regulatory requirements are missing."
+    },
+    {
+      "section": "Summary of EIA",
+      "category": "Environmental",
+      "score": 100.0,
+      "present": [
+        {
+          "item": "Environmental impact",
+          "evidence": "on of secondary information to\nidentify environmentally sensitive issues relating to the project.\n\n* Identification of base line stat",
+          "weight": 2
+        },
+        {
+          "item": "Mitigation measures",
+          "evidence": "nt Plan (EMP) incorporating appropriate\nmitigation measures to offset the identified adverse impacts, and Environmental\nMonitoring",
+          "weight": 2
+        }
+      ],
+      "missing": [],
+      "reason": "All expected items are present."
+    },
+    {
+      "section": "Economic Analysis",
+      "category": "Financial",
+      "score": 0.0,
+      "present": [],
+      "missing": [
+        {
+          "item": "Cost estimate",
+          "reason": "No evidence found for Cost estimate",
+          "weight": 2
+        },
+        {
+          "item": "Funding source",
+          "reason": "No evidence found for Funding source",
+          "weight": 1
+        },
+        {
+          "item": "Breakup",
+          "reason": "No evidence found for Breakup",
+          "weight": 1
+        }
+      ],
+      "reason": "Cost estimate, Funding source, and Breakup are missing."
+    },
+    {
+      "section": "Consultancy",
+      "category": "Financial",
+      "score": 50.0,
+      "present": [
+        {
+          "item": "Cost estimate",
+          "evidence": "in the scope\nof works of the sanctioned estimate. However, a detailed environmental impact\nassessment will have to be carried ou",
+          "weight": 2
+        }
+      ],
+      "missing": [
+        {
+          "item": "Funding source",
+          "reason": "No evidence found for Funding source",
+          "weight": 1
+        },
+        {
+          "item": "Breakup",
+          "reason": "No evidence found for Breakup",
+          "weight": 1
+        }
+      ],
+      "reason": "Funding source and Breakup are missing."
+    }
+  ],
+  "summary": {
+    "overall_score": 29.17,
+    "average_score": 29.17,
+    "weakest_sections": [
+      "Land Use",
+      "Structural Measures as suggested by the",
+      "River Training"
+    ],
+    "present_sections": [
+      "Cross Sectional Element -6",
+      "Pavement Design -8",
+      "Guide Bund of the Proposed Bridge",
+      "Traffic Signs, Markings and other Road Furniture",
+      "Summary of EIA",
+      "Consultancy"
+    ],
+    "missing_sections": [
+      "Land Use",
+      "Structural Measures as suggested by the",
+      "River Training",
+      "Culverts and Bridges",
+      "Land Acquisition",
+      "Economic Analysis"
+    ]
+  }
+}

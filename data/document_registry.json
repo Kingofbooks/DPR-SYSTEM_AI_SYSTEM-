@@ -55,6 +55,132 @@
       "processed_path": "F:\\DPR_AI-System\\data\\processed\\a9b31755-3114-43ca-9554-ce815a2ab057",
       "status": "processed",
       "created_at": "2026-09-07T05:24:15.573560+00:00"
+    },
+    "2ed542fa-71a2-4b34-8397-2edfaad700e2": {
+      "document_id": "2ed542fa-71a2-4b34-8397-2edfaad700e2",
+      "filename": "doc.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\2ed542fa-71a2-4b34-8397-2edfaad700e2_doc.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\2ed542fa-71a2-4b34-8397-2edfaad700e2",
+      "status": "processed",
+      "created_at": "2026-09-27T19:35:58.029727+00:00",
+      "user_id": "92d6cbf9-cc8b-45f1-a414-67965b871ef4"
+    },
+    "a62a9303-13a2-47bb-97f8-accdda3cc9ba": {
+      "document_id": "a62a9303-13a2-47bb-97f8-accdda3cc9ba",
+      "filename": "doc.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\a62a9303-13a2-47bb-97f8-accdda3cc9ba_doc.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\a62a9303-13a2-47bb-97f8-accdda3cc9ba",
+      "status": "processed",
+      "created_at": "2026-09-27T19:45:40.184248+00:00",
+      "user_id": "ac654f38-5fe7-44bb-890d-0ae7df2653a4"
+    },
+    "2a8bbc95-d499-4baa-8d06-ef1d4b5f4964": {
+      "document_id": "2a8bbc95-d499-4baa-8d06-ef1d4b5f4964",
+      "filename": "docA.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\2a8bbc95-d499-4baa-8d06-ef1d4b5f4964_docA.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\2a8bbc95-d499-4baa-8d06-ef1d4b5f4964",
+      "status": "failed",
+      "created_at": "2026-09-27T19:51:04.961963+00:00",
+      "user_id": "2f3fe7f1-0826-4453-ac34-19ad95c2a36d"
+    },
+    "588be6e5-7b85-40f1-b603-04d911854549": {
+      "document_id": "588be6e5-7b85-40f1-b603-04d911854549",
+      "filename": "docA.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\588be6e5-7b85-40f1-b603-04d911854549_docA.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\588be6e5-7b85-40f1-b603-04d911854549",
+      "status": "failed",
+      "created_at": "2026-09-27T19:55:20.786042+00:00",
+      "user_id": "1ca05b9b-ab10-4c5f-a3f3-8b214dc5b1c5"
+    },
+    "25273e5f-3353-4606-bd40-3dc987fcb41a": {
+      "document_id": "25273e5f-3353-4606-bd40-3dc987fcb41a",
+      "filename": "DPR_of_Road.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\25273e5f-3353-4606-bd40-3dc987fcb41a_DPR_of_Road.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\25273e5f-3353-4606-bd40-3dc987fcb41a",
+      "status": "failed",
+      "created_at": "2026-09-27T20:09:30.083149+00:00",
+      "user_id": "3047238b-11a6-4eb7-81a2-2f523ce0422e"
+    },
+    "c13725ab-afde-4d8d-a868-e92e3efd48ab": {
+      "document_id": "c13725ab-afde-4d8d-a868-e92e3efd48ab",
+      "filename": "DPR_of_Road.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\c13725ab-afde-4d8d-a868-e92e3efd48ab_DPR_of_Road.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\c13725ab-afde-4d8d-a868-e92e3efd48ab",
+      "status": "failed",
+      "created_at": "2026-09-27T20:42:34.291218+00:00",
+      "user_id": "3047238b-11a6-4eb7-81a2-2f523ce0422e"
+    },
+    "d340f5af-ef89-4274-8052-bdf757cfe78d": {
+      "document_id": "d340f5af-ef89-4274-8052-bdf757cfe78d",
+      "filename": "demo.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\d340f5af-ef89-4274-8052-bdf757cfe78d_demo.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\d340f5af-ef89-4274-8052-bdf757cfe78d",
+      "status": "failed",
+      "created_at": "2026-09-27T20:58:03.433783+00:00",
+      "user_id": "ef98605d-f2ce-4afc-bba9-9b92ddb97266"
+    },
+    "7042cc8f-b60b-487d-998a-136cd05e81e3": {
+      "document_id": "7042cc8f-b60b-487d-998a-136cd05e81e3",
+      "filename": "demo.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\7042cc8f-b60b-487d-998a-136cd05e81e3_demo.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\7042cc8f-b60b-487d-998a-136cd05e81e3",
+      "status": "processed",
+      "created_at": "2026-09-27T20:59:06.907144+00:00",
+      "user_id": "ef98605d-f2ce-4afc-bba9-9b92ddb97266"
+    },
+    "324a2f57-f156-4f7b-ae2f-f6d02d02dafb": {
+      "document_id": "324a2f57-f156-4f7b-ae2f-f6d02d02dafb",
+      "filename": "DPR_of_Road.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\324a2f57-f156-4f7b-ae2f-f6d02d02dafb_DPR_of_Road.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\324a2f57-f156-4f7b-ae2f-f6d02d02dafb",
+      "status": "processed",
+      "created_at": "2026-09-27T21:02:05.969975+00:00",
+      "user_id": "3047238b-11a6-4eb7-81a2-2f523ce0422e"
+    },
+    "b5297fb5-dc4f-4a94-a673-7b789618f103": {
+      "document_id": "b5297fb5-dc4f-4a94-a673-7b789618f103",
+      "filename": "DPR_of_Road.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\b5297fb5-dc4f-4a94-a673-7b789618f103_DPR_of_Road.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\b5297fb5-dc4f-4a94-a673-7b789618f103",
+      "status": "processed",
+      "created_at": "2026-09-28T03:31:59.990077+00:00",
+      "user_id": "b4ddd602-104b-46a6-87dc-2dc405ee507e"
+    },
+    "ae8db935-23b5-4d05-8d70-39a688e4a7a5": {
+      "document_id": "ae8db935-23b5-4d05-8d70-39a688e4a7a5",
+      "filename": "DPR_of_Road.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\ae8db935-23b5-4d05-8d70-39a688e4a7a5_DPR_of_Road.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\ae8db935-23b5-4d05-8d70-39a688e4a7a5",
+      "status": "processed",
+      "created_at": "2026-09-28T03:38:40.447597+00:00",
+      "user_id": "b4ddd602-104b-46a6-87dc-2dc405ee507e"
+    },
+    "df2787b8-c14c-4c1d-8305-3fb2dfdfb62f": {
+      "document_id": "df2787b8-c14c-4c1d-8305-3fb2dfdfb62f",
+      "filename": "324a2f57-f156-4f7b-ae2f-f6d02d02dafb_DPR_of_Road.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\df2787b8-c14c-4c1d-8305-3fb2dfdfb62f_324a2f57-f156-4f7b-ae2f-f6d02d02dafb_DPR_of_Road.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\df2787b8-c14c-4c1d-8305-3fb2dfdfb62f",
+      "status": "processed",
+      "created_at": "2026-09-28T03:41:39.099754+00:00",
+      "user_id": "b4ddd602-104b-46a6-87dc-2dc405ee507e"
+    },
+    "043acef2-fa07-4ffd-b9fe-c08c3991fa99": {
+      "document_id": "043acef2-fa07-4ffd-b9fe-c08c3991fa99",
+      "filename": "dpr-kjuice_copy.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\043acef2-fa07-4ffd-b9fe-c08c3991fa99_dpr-kjuice_copy.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\043acef2-fa07-4ffd-b9fe-c08c3991fa99",
+      "status": "processed",
+      "created_at": "2026-09-28T03:45:22.007124+00:00",
+      "user_id": "b4ddd602-104b-46a6-87dc-2dc405ee507e"
+    },
+    "601cca03-8f8f-4b3b-aa5b-2c451bd29188": {
+      "document_id": "601cca03-8f8f-4b3b-aa5b-2c451bd29188",
+      "filename": "dpr-kjuice_copy.pdf",
+      "raw_path": "F:\\DPR_AI-System\\data\\raw\\601cca03-8f8f-4b3b-aa5b-2c451bd29188_dpr-kjuice_copy.pdf",
+      "processed_path": "F:\\DPR_AI-System\\data\\processed\\601cca03-8f8f-4b3b-aa5b-2c451bd29188",
+      "status": "processed",
+      "created_at": "2026-09-28T05:07:56.404875+00:00",
+      "user_id": "638418b3-65d7-46b4-bd73-8232d9cc2532"
     }
   }
 }

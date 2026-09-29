@@ -794,17 +794,16 @@ def main():
 
     for section in sections:
 
+        page_display = (
+            str(section['pdf_page'] + 1)
+            if section['pdf_page'] is not None
+            else 'NOT FOUND'
+        )
         print(
             f"{section['section_id']:<12} | "
             f"{section['title']:<45} | "
-            f"PDF Page: "
-            f"{str(
-                section['pdf_page'] + 1
-                if section['pdf_page'] is not None
-                else 'NOT FOUND'
-            ):<10} | "
-            f"Confidence: "
-            f"{section['confidence']}"
+            f"PDF Page: {page_display:<10} | "
+            f"Confidence: {section['confidence']}"
         )
 
 

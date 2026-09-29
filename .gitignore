@@ -5,4 +5,9 @@ __pycache__/
 *.pyd
 .ipynb_checkpoints/
 
+# local database files and generated uploads
+/data/database/
+/data/uploads/
+*.db
+
 node_modules/

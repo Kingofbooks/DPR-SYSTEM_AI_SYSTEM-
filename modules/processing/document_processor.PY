@@ -322,6 +322,8 @@ class DocumentProcessor:
 
         mapped_sections = []
 
+        mapped_section_list = []
+
         extracted_sections = []
 
 

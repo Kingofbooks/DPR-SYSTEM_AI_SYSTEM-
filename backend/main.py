@@ -1,7 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from backend.db.database import init_db
 from backend.routes.analysis import router as analysis_router
+from backend.routes.auth import router as auth_router
 from backend.routes.documents import router as documents_router
 from backend.routes.query import router as query_router
 
@@ -20,11 +22,17 @@ app.add_middleware(
 )
 
 
+@app.on_event("startup")
+def startup_event() -> None:
+    init_db()
+
+
 @app.get("/health", tags=["system"])
 def health_check():
     return {"status": "healthy", "service": "DPR AI System"}
 
 
+app.include_router(auth_router)
 app.include_router(documents_router)
 app.include_router(query_router)
 app.include_router(analysis_router)

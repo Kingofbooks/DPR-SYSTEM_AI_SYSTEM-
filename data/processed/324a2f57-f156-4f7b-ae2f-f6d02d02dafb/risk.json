@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "filename": "completeness"
+  },
+  "risk_assessment": {
+    "risk_score": 0.5511,
+    "risk_percentage": 55.11,
+    "risk_level": "HIGH",
+    "component_risks": {
+      "completeness_risk": 0.7,
+      "quality_risk": 0.38,
+      "health_risk": 0.69,
+      "weakness_risk": 0.483,
+      "consistency_risk": 0.2476
+    },
+    "risk_factors": [
+      {
+        "factor": "Low document completeness",
+        "value": 0.0,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "Critical DPR components may be missing",
+        "value": 0.0,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "Low overall document quality",
+        "value": 0.62,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "Low average section quality",
+        "value": 0.62,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "At least one section has moderate quality",
+        "value": 0.62,
+        "severity": "MEDIUM"
+      },
+      {
+        "factor": "Low overall document health",
+        "value": 0.31,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "High document weakness score",
+        "value": 0.69,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "High completeness risk risk",
+        "value": 0.7,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "High health risk risk",
+        "value": 0.69,
+        "severity": "HIGH"
+      },
+      {
+        "factor": "Moderate weakness risk risk",
+        "value": 0.483,
+        "severity": "MEDIUM"
+      }
+    ],
+    "positive_factors": [
+      "No weak sections detected"
+    ]
+  }
+}

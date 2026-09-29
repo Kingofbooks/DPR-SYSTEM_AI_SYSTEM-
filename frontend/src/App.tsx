@@ -7,9 +7,10 @@ import {
 } from 'lucide-react'
 import {
   askQuestion, getAnalysis, getCompleteAnalysis, getDocument, getDocuments,
-  healthCheck, processDocument, uploadDocument,
+  healthCheck, loginUser, processDocument, readStoredSession, persistSession,
+  registerUser, uploadDocument,
 } from './services/api'
-import type { AnalysisKind, AnalysisEnvelope, ChatMessage, DocumentRecord, ProcessResponse, Source } from './types'
+import type { AnalysisKind, AnalysisEnvelope, AuthUser, ChatMessage, DocumentRecord, LoginResponse, ProcessResponse, Source } from './types'
 import { normalizeCompleteness, normalizeQuality, normalizeRisk, percentageText, safeNumber, toPercentage } from './utils/analysis'
 import './styles.css'
 
@@ -36,6 +37,11 @@ function formatLabel(key: string) {
 }
 
 function App() {
+  const [session, setSession] = useState<{ token: string; user: AuthUser } | null>(() => readStoredSession())
+  const [authMode, setAuthMode] = useState<'login' | 'register'>('login')
+  const [authForm, setAuthForm] = useState({ name: '', email: '', password: '' })
+  const [authBusy, setAuthBusy] = useState(false)
+  const [authError, setAuthError] = useState('')
   const [documents, setDocuments] = useState<DocumentRecord[]>([])
   const [selectedId, setSelectedId] = useState<string | null>(null)
   const [selectedDocument, setSelectedDocument] = useState<DocumentRecord | null>(null)
@@ -47,6 +53,7 @@ function App() {
   const [apiOnline, setApiOnline] = useState(false)
   const [busy, setBusy] = useState(false)
   const [stage, setStage] = useState<'idle' | 'uploading' | 'processing' | 'complete' | 'failed'>('idle')
+  const [processingPhase, setProcessingPhase] = useState(0)
   const [error, setError] = useState('')
   const [chatOpen, setChatOpen] = useState(true)
   const [messages, setMessages] = useState<ChatMessage[]>([])
@@ -57,9 +64,22 @@ function App() {
   const selected = useMemo(() => documents.find((document) => document.document_id === selectedId) || selectedDocument, [documents, selectedDocument, selectedId])
 
   useEffect(() => {
+    persistSession(session)
+  }, [session])
+
+  useEffect(() => {
+    if (!session) {
+      setDocuments([])
+      setSelectedId(null)
+      setSelectedDocument(null)
+      setAnalysis({ completeness: {}, quality: {}, features: {}, risk: {} })
+      setProcessingResults(null)
+      return
+    }
+
     healthCheck().then(() => setApiOnline(true)).catch(() => setApiOnline(false))
     getDocuments().then((response) => setDocuments(response.documents)).catch(() => undefined)
-  }, [])
+  }, [session])
 
   useEffect(() => {
     if (!selectedId) return
@@ -67,6 +87,81 @@ function App() {
     if (document) setSelectedDocument(document)
     if (document?.status === 'processed') loadAnalysis(selectedId)
   }, [selectedId, documents])
+
+  useEffect(() => {
+    if (!session) return
+
+    const shouldPoll = documents.some((document) => document.status === 'uploaded' || document.status === 'processing')
+    if (!shouldPoll) return
+
+    const refreshLoop = window.setInterval(async () => {
+      try {
+        const response = await getDocuments()
+        setDocuments(response.documents)
+
+        const active = response.documents.find((document) => document.document_id === selectedId)
+        if (active) {
+          setSelectedDocument(active)
+          if (active.status === 'uploaded') {
+            setStage('processing')
+            setProcessingPhase((current) => Math.max(current, 1))
+          }
+          if (active.status === 'processing') {
+            setStage('processing')
+            setProcessingPhase((current) => Math.min(9, current + 1))
+          }
+          if (active.status === 'processed') {
+            setStage('complete')
+            setProcessingPhase(pipelineSteps.length - 1)
+            await loadAnalysis(active.document_id)
+          }
+        }
+      } catch {
+        // Keep the background poll alive; the backend may still be running.
+      }
+    }, 2000)
+
+    return () => window.clearInterval(refreshLoop)
+  }, [documents, selectedId, session])
+
+  async function handleAuthSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    setAuthError('')
+    setAuthBusy(true)
+
+    try {
+      if (authMode === 'login') {
+        const response = await loginUser({ email: authForm.email.trim(), password: authForm.password })
+        setSession({ token: response.access_token, user: response.user })
+      } else {
+        await registerUser({
+          name: authForm.name.trim(),
+          email: authForm.email.trim(),
+          password: authForm.password,
+        })
+        const response = await loginUser({ email: authForm.email.trim(), password: authForm.password })
+        setSession({ token: response.access_token, user: response.user })
+      }
+      setAuthForm({ name: '', email: '', password: '' })
+    } catch (authFailure) {
+      setAuthError(authFailure instanceof Error ? authFailure.message : 'Authentication failed.')
+    } finally {
+      setAuthBusy(false)
+    }
+  }
+
+  function logout() {
+    setSession(null)
+    setDocuments([])
+    setSelectedId(null)
+    setSelectedDocument(null)
+    setMessages([])
+    setQuestion('')
+    setChatOpen(true)
+    setPage('documents')
+    setError('')
+    setStage('idle')
+  }
 
   async function loadAnalysis(documentId: string) {
     try {
@@ -93,17 +188,26 @@ function App() {
     setError('')
     try {
       setStage('uploading')
+      setProcessingPhase(0)
       const uploaded = await uploadDocument(file)
       setSelectedId(uploaded.document_id)
+      setSelectedDocument({
+        document_id: uploaded.document_id,
+        filename: uploaded.filename,
+        status: 'uploaded',
+        metadata: {},
+      })
       setStage('processing')
+      setProcessingPhase(1)
+
       const processed = await processDocument(uploaded.document_id)
       setProcessingResults(processed.results)
-      setStage('complete')
+      setStage('processing')
+      setProcessingPhase(2)
       const refreshed = await getDocuments()
       setDocuments(refreshed.documents)
-      setSelectedDocument(await getDocument(uploaded.document_id))
-      await loadAnalysis(uploaded.document_id)
-      setPage('analysis')
+      setSelectedDocument(refreshed.documents.find((item) => item.document_id === uploaded.document_id) || null)
+      setPage('documents')
     } catch (uploadError) {
       setStage('failed')
       setError(uploadError instanceof Error ? uploadError.message : 'Unable to process this document.')
@@ -133,11 +237,8 @@ function App() {
     try {
       const response = await processDocument(selected.document_id)
       setProcessingResults(response.results)
-      setStage('complete')
-      await loadAnalysis(selected.document_id)
-      const refreshed = await getDocuments()
-      setDocuments(refreshed.documents)
-      setPage('analysis')
+      setStage('processing')
+      setPage('documents')
     } catch (processError) {
       setStage('failed')
       setError(processError instanceof Error ? processError.message : 'Processing failed.')
@@ -172,6 +273,20 @@ function App() {
   const completenessScores = completeness.scores || {}
   const pageTitle = page === 'documents' ? 'Document workspace' : page === 'analysis' ? 'Analysis overview' : `${formatLabel(page)} analysis`
 
+  if (!session) {
+    return (
+      <AuthScreen
+        mode={authMode}
+        form={authForm}
+        busy={authBusy}
+        error={authError}
+        onModeChange={setAuthMode}
+        onFieldChange={(field, value) => setAuthForm((current) => ({ ...current, [field]: value }))}
+        onSubmit={handleAuthSubmit}
+      />
+    )
+  }
+
   return (
     <div className="app-shell">
       <aside className="sidebar">
@@ -185,17 +300,80 @@ function App() {
           <NavButton active={page === 'features'} icon={<Zap size={17} />} label="Feature profile" onClick={() => setPage('features')} disabled={!processed} />
           <NavButton active={page === 'risk'} icon={<ShieldCheck size={17} />} label="Risk assessment" onClick={() => setPage('risk')} disabled={!processed} />
         </nav>
-        <div className="sidebar-bottom"><div className={`connection ${apiOnline ? 'online' : ''}`}><span className="status-dot" />{apiOnline ? 'System online' : 'Backend offline'}</div><span className="version">API v1.0</span></div>
+        <div className="sidebar-bottom"><div className={`connection ${apiOnline ? 'online' : ''}`}><span className="status-dot" />{apiOnline ? 'System online' : 'Backend offline'}</div><button className="text-button logout-button" onClick={logout}>Logout</button></div>
       </aside>
 
       <main className="main-area">
-        <header className="topbar"><div><div className="eyebrow">DPR INTELLIGENCE PLATFORM</div><h1>{pageTitle}</h1></div><div className="topbar-actions">{selected && <div className="context-pill"><FileText size={15} /><span>{selected.filename}</span><b>{selected.status}</b></div>}<button className="icon-button" title="Open assistant" onClick={() => setChatOpen((open) => !open)}><PanelRight size={18} /></button></div></header>
+        <header className="topbar"><div><div className="eyebrow">DPR INTELLIGENCE PLATFORM</div><h1>{pageTitle}</h1></div><div className="topbar-actions">{selected && <div className="context-pill"><FileText size={15} /><span>{selected.filename}</span><b>{selected.status}</b></div>}<div className="context-pill user-pill"><span>{session.user.name}</span><b>{session.user.email}</b></div><button className="icon-button" title="Open assistant" onClick={() => setChatOpen((open) => !open)}><PanelRight size={18} /></button></div></header>
         {error && <div className="error-banner"><AlertCircle size={17} /><span>{error}</span><button onClick={() => setError('')}><X size={15} /></button></div>}
 
-        {stage === 'processing' || stage === 'uploading' ? <ProcessingView file={file} stage={stage} onCancel={() => setStage('idle')} /> : page === 'documents' ? <DocumentsView file={file} dragActive={dragActive} busy={busy} documents={documents} selectedId={selectedId} inputRef={fileInput} onFile={acceptFile} onDrag={setDragActive} onBrowse={() => fileInput.current?.click()} onRemove={() => setFile(null)} onUpload={uploadAndProcess} onSelect={selectDocument} onReprocess={reprocess} /> : <AnalysisView page={page} selected={selected} processingResults={processingResults} completeness={completeness} quality={quality} features={features} risk={risk} summary={summary} completenessScores={completenessScores} sections={sections} onNavigate={setPage} onReprocess={reprocess} busy={busy} />}
+        {stage === 'processing' || stage === 'uploading' ? <ProcessingView file={file} stage={stage} progressIndex={processingPhase} onCancel={() => setStage('idle')} /> : page === 'documents' ? <DocumentsView file={file} dragActive={dragActive} busy={busy} documents={documents} selectedId={selectedId} inputRef={fileInput} onFile={acceptFile} onDrag={setDragActive} onBrowse={() => fileInput.current?.click()} onRemove={() => setFile(null)} onUpload={uploadAndProcess} onSelect={selectDocument} onReprocess={reprocess} /> : <AnalysisView page={page} selected={selected} processingResults={processingResults} completeness={completeness} quality={quality} features={features} risk={risk} summary={summary} completenessScores={completenessScores} sections={sections} onNavigate={setPage} onReprocess={reprocess} busy={busy} />}
       </main>
 
       {chatOpen && <Assistant selected={selected} messages={messages} question={question} busy={chatBusy} onQuestion={setQuestion} onSubmit={submitQuestion} onClose={() => setChatOpen(false)} />}
+    </div>
+  )
+}
+
+function AuthScreen({
+  mode,
+  form,
+  busy,
+  error,
+  onModeChange,
+  onFieldChange,
+  onSubmit,
+}: {
+  mode: 'login' | 'register'
+  form: { name: string; email: string; password: string }
+  busy: boolean
+  error: string
+  onModeChange: (value: 'login' | 'register') => void
+  onFieldChange: (field: 'name' | 'email' | 'password', value: string) => void
+  onSubmit: (event: React.FormEvent<HTMLFormElement>) => void
+}) {
+  return (
+    <div className="auth-screen">
+      <div className="auth-card panel">
+        <div className="auth-header">
+          <div className="brand-mark"><Sparkles size={18} /></div>
+          <div>
+            <span className="section-kicker">SECURE ACCESS</span>
+            <h2>{mode === 'login' ? 'Welcome back' : 'Create your account'}</h2>
+          </div>
+        </div>
+
+        <div className="auth-tabs">
+          <button className={mode === 'login' ? 'active' : ''} onClick={() => onModeChange('login')} type="button">Login</button>
+          <button className={mode === 'register' ? 'active' : ''} onClick={() => onModeChange('register')} type="button">Register</button>
+        </div>
+
+        <form className="auth-form" onSubmit={onSubmit}>
+          {mode === 'register' && (
+            <label>
+              <span>Name</span>
+              <input value={form.name} onChange={(event) => onFieldChange('name', event.target.value)} placeholder="Jane Doe" autoComplete="name" />
+            </label>
+          )}
+
+          <label>
+            <span>Email</span>
+            <input value={form.email} onChange={(event) => onFieldChange('email', event.target.value)} placeholder="you@example.com" type="email" autoComplete="email" />
+          </label>
+
+          <label>
+            <span>Password</span>
+            <input value={form.password} onChange={(event) => onFieldChange('password', event.target.value)} placeholder="Minimum 8 characters" type="password" autoComplete={mode === 'login' ? 'current-password' : 'new-password'} />
+          </label>
+
+          {error && <div className="error-banner auth-error"><AlertCircle size={17} /><span>{error}</span></div>}
+
+          <button className="primary-button wide" type="submit" disabled={busy}>
+            {busy ? <LoaderCircle className="spin" size={17} /> : <ShieldCheck size={17} />}
+            {busy ? 'Please wait...' : mode === 'login' ? 'Login' : 'Register'}
+          </button>
+        </form>
+      </div>
     </div>
   )
 }
@@ -214,8 +392,10 @@ function DocumentList({ documents, selectedId, onSelect, onReprocess }: any) {
 
 function StatusBadge({ status }: { status: string }) { return <span className={`status-badge ${status}`}>{status}</span> }
 
-function ProcessingView({ file, stage, onCancel }: { file: File | null; stage: string; onCancel: () => void }) {
-  return <section className="content-wrap processing-wrap"><div className="processing-header"><div><div className="section-kicker">LIVE WORKSPACE</div><h2>{stage === 'uploading' ? 'Uploading your report' : 'Pipeline running'}</h2><p>{stage === 'uploading' ? 'Securely sending the PDF to the DPR analysis service.' : 'The backend is running the complete analysis pipeline. This may take a few minutes.'}</p></div><div className="processing-orb"><LoaderCircle className="spin" size={30} /></div></div><div className="pipeline-card panel"><div className="pipeline-summary"><div><span className="section-kicker">CURRENT STATUS</span><strong>{stage === 'uploading' ? 'Uploading document...' : 'Running analysis pipeline...'}</strong></div><div className="pipeline-meta"><span>{file?.name}</span><span>Backend process active</span></div></div><div className="honest-progress"><div className="progress-track"><div className="progress-fill animated-fill" /></div><span>Pipeline running</span></div><div className="pipeline-list">{pipelineSteps.map(([title, description], index) => <div className="pipeline-step" key={title}><div className="step-icon"><LoaderCircle className="spin" size={16} /></div><div><strong>{String(index + 1).padStart(2, '0')} {title}</strong><span>{description}</span></div><em>Queued</em></div>)}</div><button className="text-button" onClick={onCancel}>Return to documents</button></div></section>
+function ProcessingView({ file, stage, progressIndex, onCancel }: { file: File | null; stage: string; progressIndex: number; onCancel: () => void }) {
+  const activeStep = Math.min(Math.max(progressIndex, 0), pipelineSteps.length - 1)
+
+  return <section className="content-wrap processing-wrap"><div className="processing-header"><div><div className="section-kicker">LIVE WORKSPACE</div><h2>{stage === 'uploading' ? 'Uploading your report' : 'Pipeline running'}</h2><p>{stage === 'uploading' ? 'Securely sending the PDF to the DPR analysis service.' : 'The backend is running the complete analysis pipeline. This may take a few minutes.'}</p></div><div className="processing-orb"><LoaderCircle className="spin" size={30} /></div></div><div className="pipeline-card panel"><div className="pipeline-summary"><div><span className="section-kicker">CURRENT STATUS</span><strong>{stage === 'uploading' ? 'Uploading document...' : pipelineSteps[activeStep][0]}</strong></div><div className="pipeline-meta"><span>{file?.name || 'Document processing'}</span><span>{stage === 'uploading' ? 'Sending to server' : 'Background analysis running'}</span></div></div><div className="honest-progress"><div className="progress-track"><div className="progress-fill animated-fill" style={{ width: `${Math.max(((activeStep + 1) / pipelineSteps.length) * 100, 8)}%` }} /></div><span>{Math.round(((activeStep + 1) / pipelineSteps.length) * 100)}%</span></div><div className="pipeline-list">{pipelineSteps.map(([title, description], index) => <div className="pipeline-step" key={title}><div className="step-icon" style={{ color: index <= activeStep ? '#1d7a6a' : '#94a39a', borderColor: index <= activeStep ? '#9ad1bd' : '#dce5dc', background: index <= activeStep ? '#eaf7ee' : 'transparent' }}>{index <= activeStep ? <Check size={14} /> : <LoaderCircle className="spin" size={14} />}</div><div><strong>{String(index + 1).padStart(2, '0')} {title}</strong><span>{description}</span></div><em>{index < activeStep ? 'Done' : index === activeStep ? 'Running' : 'Queued'}</em></div>)}</div><button className="text-button" onClick={onCancel}>Return to documents</button></div></section>
 }
 
 function AnalysisView(props: any) {

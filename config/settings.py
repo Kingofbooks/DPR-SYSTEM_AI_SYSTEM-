@@ -33,8 +33,9 @@ class Config:
     
     #Security settings
     SECRET_KEY: str = os.getenv("SECRET_KEY", "supersecretkey")
-    JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "jwtsecretkey")
-    
+    JWT_SECRET_KEY: str = os.getenv("JWT_SECRET_KEY", "development-secret-change-me")
+    JWT_ALGORITHM: str = os.getenv("JWT_ALGORITHM", "HS256")
+    ACCESS_TOKEN_EXPIRE_MINUTES: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
 
 config = Config()
 

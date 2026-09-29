@@ -619,7 +619,10 @@ class RiskScorer:
             "filename",
             feature_data.get(
                 "filename",
-                "Unknown Document"
+                feature_data.get(
+                    "document",
+                    "Unknown Document"
+                )
             )
         )
 
